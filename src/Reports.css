@@ -1,0 +1,59 @@
+.reports-container {
+  text-align: center;
+background-color: azure;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block; /* Make the container fit the size of the image */
+  width: 24%;
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+  transition: box-shadow 0.3s ease-out, transform 0.3s ease-out; /* Smooth transitions for shadow and position */
+}
+
+
+
+.image-container img {
+  width: 100%; /* This will make the image responsive */
+  height: auto;
+  display: block;
+}
+
+.download-btn {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the button exactly on the image */
+  padding: 10px 20px;
+  background-color: #0843BF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  max-width: 350px;
+}
+
+.download-btn:hover {
+  background-color: #062f6c; /* Darker blue on hover */
+}
+
+.image-container:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Deeper shadow for a "lifted" effect */
+  transform: translateY(-5px); /* Slightly raise the container */
+}
+
+.repmainti h1 {
+  font-size: 1.8rem;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  position: relative; /* Needed for absolute positioning of the pseudo-element */
+  margin-bottom:10px;
+  color: white;
+}
+
+.repmainti{
+  background-color: #2f4b75;
+}

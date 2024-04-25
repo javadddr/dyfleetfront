@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+.MuiAccordionDetails-root.css-15v22id-MuiAccordionDetails-root form{
+display: flex;
+align-items: center;
+
+}
+
+.dateeqformda{
+  width: 25%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation1.MuiAccordion-root.MuiAccordion-rounded.MuiAccordion-gutters.css-1c35hjw-MuiPaper-root-MuiAccordion-root{
+  margin-top: 20px;
+  border: 1px solid black;
+border-radius: 5px;
+  
+}
+.MuiTypography-root.MuiTypography-body1.css-ahj2mt-MuiTypography-root{
+  font-weight: 400;
+  font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2rem;
+ 
+  color: #3d2aeb;
+  position: relative;
+  display: inline-block;
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  font-family:'Inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.bdaeqis{
+  display: flex;
+  justify-content: center;
+}
+
+.MuiButtonBase-root.MuiAccordionSummary-root.MuiAccordionSummary-gutters.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root{
+padding: 0px;
+
+}
+.addegac{
+  padding: 10px;
+  height: 50px;
+  margin: 0px;
+}
+
+.form-containerPPOL {
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  max-height: 0;
+}
+
+.form-containerPPOL.open {
+  max-height: 1000px; /* Adjust as necessary */
+  margin-top: 20PX;
+}
+.fomequfordrivsd{
+  display: flex;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+.containerPPOLmm{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+.add-equipment-btn{
+  display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 230px;
+    background-color: #0843bf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+ 
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.addegac{
+  background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    height: 55px;
+    border-radius: 5px;
+}
+
+.MuiTablePagination-root.css-jtlhu6-MuiTablePagination-root{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+
+}
+
+.css-pdct74-MuiTablePagination-selectLabel{
+  margin-bottom: 0px;
+  font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.css-levciy-MuiTablePagination-displayedRows{
+  font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 0px;
+}

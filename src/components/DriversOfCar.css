@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+.current-drivers, .driver-history {
+  margin-bottom: 20px;
+}
+
+.current-drivers > div, .driver-history table {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.driver-history h2 {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+.drivers-table th {
+  background-color: black;
+  color: rgb(251, 251, 251);
+  font-family:'inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: 400;
+border-right: 1px solid white;
+
+}
+.drivers-table th:hover {
+  background-color: black;
+}
+
+
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.hr-divider {
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.current-driver button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+ 
+}
+
+.current-driver button:hover {
+  background-color: #d32f2f;
+}
+
+.buttonassign{
+  display: flex;
+  justify-content: flex-end;
+
+}
+.buttonassign button{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background-color: rgb(252, 169, 62);
+  color: black;
+  font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 5PX;
+}
+.driverassititle h3{
+  font-weight: 300;
+  color: #034b98;
+  font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.driverassititleanddate{
+  display: flex;
+ justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.react-datepicker-wrapper{
+  margin-left: 10px;
+}
+.driverassititleanddate button{
+  margin-left: 10px;
+  width: 100px;
+  height: 25px;
+  padding: 0px;
+  border-radius: 0;
+}
+#subcanceldri{
+  background-color: #d32f2f;
+}
+.assign-driver-form {
+  overflow: hidden;
+  max-height: 0;
+  transition:  opacity 0.4s ease, transform 0.4s ease;
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+
+.assign-driver-form-visible {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px; /* Adjust as needed to accommodate the form's size */
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  /* border: 1px solid black; */
+  padding: 20px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.custom-select-wrapper1 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 300px; /* Adjust based on your needs */
+}
+.basigni{
+  display: flex;
+  flex-direction: column;
+}
+#subassigndri{
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+#subcanceldri{
+  border-radius: 5px;
+}
+.custom-select1 {
+  display: block;
+  width: 100%;
+  height: 55px; /* Adjust based on your needs */
+  padding: 8px 16px;
+  font-size: 16px; /* Adjust based on your needs */
+  line-height: 1.5;
+  border: 2px solid #ddd; /* Border color */
+  border-radius: 8px; /* Border radius */
+  background-color: #fff;
+  appearance: none; /* Remove default arrow icon in some browsers */
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-select1:focus {
+  outline: none;
+  border-color: #a4d7f5; /* Focus border color */
+}
+
+.custom-select-wrapper1::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  color: #888; /* Arrow icon color */
+  pointer-events: none;
+}
+
+/* Style the options (optional, for custom dropdown solutions) */
+.custom-option {
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.custom-option:last-child {
+  border-bottom: none;
+}
+
+.custom-option:hover {
+  background-color: #e9e9e9;
+}
+
+
+
+.currenttotal{
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.currenttotal button{
+  background-color: antiquewhite;
+  color: black;
+  font-size: 1rem;
+}
+
+.pagination-controls button {
+  background-color: rgb(237, 238, 242);
+  border-radius: 1px;
+color: black;
+  padding: 6px;
+  font-size: 0.8rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+}
+.pagination-controls span{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.pagination-controls{
+  display: flex;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+/* Your existing CSS imports and styles */
+
+/* Add styles for modal-content2x below or integrate into your existing CSS file */
+.modal-content2x {
+  max-height: 800px;
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;  /* For Internet Explorer and Edge */
+  margin: 0px;
+  
+}
+
+.modal-content2x::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+  
+}
+
+
+.titlcure {
+  font-weight: 400;
+  font-family: 'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #000000;
+background-color: #e4eb83;
+padding: 5px;
+margin-bottom: 10px;
+border-radius: 5px;
+  position: relative; /* Necessary for positioning the pseudo-element */
+  display: inline-block; /* Make the element's width only as wide as the content */
+}
+
+
+
+.currentdeta strong{
+  color: #bb5210;
+}
+.currentdeta span{
+  color: #421df8;
+}
+
+.drivers-table th, .drivers-table td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 10px;
+}
+
+.drivers-table th.name, .drivers-table td.name {
+  width: 300px; /* Adjust width as needed */
+  
+}
+
+.drivers-table th.from, .drivers-table td.from {
+  width: 200px; /* Adjust width as needed */
+  
+}
+
+.drivers-table th.till, .drivers-table td.till,
+.drivers-table th.status, .drivers-table td.status,
+.drivers-table th.actions, .drivers-table td.actions {
+  width: 200px; /* Adjust width as needed for consistency */
+  
+}
+
+/* Additional styles for your table */
+table.drivers-table {
+  table-layout: fixed; /* This ensures that the table layout is fixed */
+  width: 100%; /* Adjust the table width as needed */
+ 
+}
+.buttonsinside{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.dteedidri{
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(171, 171, 171, 0.1); /* Semi-transparent black background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's above everything else */
+}
+
+.delete-confirmation-content {
+  position: fixed; /* Fixed position to stay in view */
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  z-index: 100; /* Ensure it's above other content */
+  border-radius: 5px;
+  width: 400px; /* Fixed width */
+  border: 1px solid rgb(214, 214, 214);
+}
+
+.delete-confirmation-content p {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  font-family: 'roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+.delete-confirmation-content button:nth-child(2) {
+  background-color: #dc3545;
+}
+
+.delete-confirmation-content button:last-child {
+  background-color: #cfc8fd; /* Red color for cancel */
+  color: rgb(255, 255, 255);
+  font-family:'roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 300;
+  color: black;
+  width: 100px;
+  
+}
+
+
+.drivers-table thead{
+  background-color: black;
+  color: white;
+}
+.drivers-table thead:hover{
+  background-color: black;
+}

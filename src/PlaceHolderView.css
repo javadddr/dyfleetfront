@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+.containerflow1 {
+  position: relative;
+}
+
+.sidebottiOP{
+  display: flex;
+  flex-direction: column;
+width: 35%;
+  justify-content: center;
+
+  top: 30%;
+  left: 15%;
+}
+.pagedahsss{
+  margin-left:10% ;
+}
+
+.titledahsss{
+  margin-top: 40%;
+  margin-left:10% ;
+  margin-bottom: 30px;
+  font-size: 1.4rem;
+  width: 67%;
+  font-family:'Raleway','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+}
+.sidebottiOP img{
+ opacity: 0.5;
+  
+}
+.sidebottiOP img:hover{
+  opacity: 1;
+   
+ }
+ .placflowbuactive{
+  background-color: rgb(135, 149, 240);
+  color: rgb(255, 255, 255);
+  border: 1px solid black;
+ }
+ .placflowbu{
+  background-color:rgb(246, 242, 238);
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(185, 184, 184);
+ }
+
+ .mainofplacholdring{
+  background-color: rgb(255, 255, 255);
+ }
+
+ .glow {
+  color: blue;
+  text-shadow: 0 0 5px rgba(0, 0, 255, 0.7), 0 0 10px rgba(0, 0, 255, 0.5);
+  animation: glow-animation 1.5s infinite alternate;
+}
+
+@keyframes glow-animation {
+  from {
+    text-shadow: 0 0 2px rgba(0, 0, 255, 0.5), 0 0 4px rgba(0, 0, 255, 0.3);
+  }
+  to {
+    text-shadow: 0 0 5px rgba(0, 0, 255, 0.7), 0 0 10px rgba(0, 0, 255, 0.5);
+  }
+}
+

@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 50; /* Ensure it's below the modal but above other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Enhanced modal styles */
+.car-details-modal {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  padding-top: 0px;
+  z-index: 100; /* Above the overlay */
+  width: 1300px;
+  height: 900px;
+  display: flex;
+  flex-direction: column; /* Organize content in a column */
+}
+
+.modal-header {
+  display: flex;
+background-color: rgb(255, 255, 255);
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px; /* Add space below the header */
+  padding-top: 20px;
+}
+.cargenstatus{
+  display: flex;
+  flex-direction: column;
+}
+.modal-header h2 {
+  margin: 0; /* Remove default margin */
+  color: #333; /* Dark text for better readability */
+ 
+}
+
+.modal-header button {
+  float: right;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background: rgb(251, 199, 199);
+    color: black;
+    border-radius: 5px;
+    width: 140px;
+}
+.statusfinali{
+  font-weight: 300;
+  font-size: 1.2rem;
+  font-family:'inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.statusfinali1{
+  font-weight: 300;
+  font-size: 1.5rem;
+  font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+  padding-bottom: 15px;
+}
+
+.modal-header button:hover {
+  background-color: #ff6b81; /* Lighter shade on hover */
+}
+
+
+.modal-tabs {
+  display: flex;
+  justify-content: space-between; /* Adjusted to 'space-between' to ensure buttons are evenly spaced */
+  width: 100%; /* Ensure the container takes full width of its parent */
+ height: 50px;
+  border:1px solid  #030303;
+  border-radius: 5px;
+  
+}
+
+.modal-tabs button {
+  position: relative; /* Needed for absolute positioning of the pseudo-elements */
+  padding: 10px 20px;
+  background-color: transparent; /* Match page background */
+  color: #333; /* Button text color */
+
+  border-right: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 1.2rem;
+
+  outline: none; /* Remove the default focus outline */
+  overflow: hidden; /* Necessary for the border animation */
+}
+
+.modal-tabs button:last-child {
+  margin-right: 0; /* No margin for the last button to ensure consistency */
+  
+}
+
+/* Animation for border */
+.modal-tabs button::before {
+  content: '';
+  position: absolute;
+  
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent; /* Initially transparent border */
+ 
+  transition: transform 0.4s, border-color 0.4s; /* Smooth transition for the border */
+  transform: scale(0.1, 1); /* Start from the center horizontally */
+  z-index: 0;
+}
+
+.modal-tabs button:hover::before, .modal-tabs button:focus::before {
+  border-color: #007bff; 
+  transform: scale(1, 1); 
+  transition-timing-function: ease-out;
+  
+}
+
+.modal-tabs button.default-active::before {
+  height: 50px;
+  transform: scale(1, 1); 
+}
+.tab-button.button-active{
+  background-color: #4664e9;
+  color: white; 
+  border-color: #030303;
+  border-radius: 0px;
+  height: 50px;
+
+  
+}
+.tab-button{
+  border-radius: 0px;
+  border: none;
+  width: 300px;
+
+}
+.modal-content2x{
+  padding: 5px;
+ 
+}
+.disicopo h6{
+  margin-bottom: 0px;
+  margin-left: 5px;
+  color: #091a63;
+  border: 1px solid black;
+  padding: 3px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 5px;
+  background-color: #ff6b81;
+}
+

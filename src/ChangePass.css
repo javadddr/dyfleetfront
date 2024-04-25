@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+.mainlogin {
+  position: relative;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.popup-content {
+  background: #f7f3ea;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-content button {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+.login-container a {
+  color: #100f0f;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  
+  font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.message {
+  margin: 20px 0;
+  color: red;
+  text-align: center;
+  font-size: .9rem;
+  font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.titlechange{
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 5.5rem;
+  color: #120ee5;
+ 
+  font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
+}
+
+.gif-img {
+  margin-bottom: 100px;
+}
+.gif{
+  display: flex;
+  justify-content: center;
+}
+.messageandemail{
+font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.forgotpassdd span{
+  color: #120ee5;
+  }
+
+  .forgotpassdd span:hover{
+    text-decoration: underline;
+  }
+.forgotpassdd{
+  margin-top: 250px;
+}
+.forgotpassddo span{
+  color: #120ee5;
+  }
+
+  .forgotpassddo span:hover{
+    text-decoration: underline;
+  }
+.forgotpassddo{
+  margin-top: 90px;
+}
+.reseterror{
+  position:fixed;
+  margin-top: 15%;
+}

@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+.mainlischeckpage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.mainpipliscmay{
+  display: flex;
+ 
+}
+.search-bar-container{
+  display: flex;
+
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+ 
+  font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+.geeraliindiv1dfr span{
+  color: #004085;
+  font-weight: 500;
+  margin-right: 3px;
+}
+.search-inputpp{
+  width: 15%;
+  height: 40px;
+  padding-left: 10px;
+}
+.search-bar-container input{
+  border: 1px solid black;
+  font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.titllicespipo{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding:0px;
+align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  margin-bottom: 10px;
+  min-height: 60px;
+}
+.status-Noorexpiredinspection .titllicespipo {
+  background-color: #f7dbdb;
+}
+.status-NotEnrolled .titllicespipo {
+  background-color: #f7dbdb;
+}
+.status-Setup .titllicespipo {
+  background-color: #d0eaff;
+}
+
+.status-Waiting .titllicespipo {
+  background-color: #d0eaff;
+}
+.status-DriverCheck .titllicespipo {
+  background-color: #fffacd;
+  
+}
+.status-UnderInspection .titllicespipo {
+  background-color: #fffacd;
+  
+}
+
+.status-Rejected .titllicespipo {
+  background-color: #fc695c;
+  
+}
+.status-PendingReview .titllicespipo {
+  background-color: #e9d0ff;
+  
+}
+
+.status-InspectionDone .titllicespipo {
+  background-color: #d0f5d8;
+}
+.status-ValidLicenses .titllicespipo {
+  background-color: #d0f5d8;
+}
+.PIPLINIFORLICEN{
+  margin-right: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  border: 1px solid #b0cbbc;
+  border-top: none;
+  margin-bottom: 20px;
+  padding: 5px;
+  height: 800px;
+  padding-top: 0px;
+  background-color: #F6F6F6;
+width: 300px;
+
+}
+.driverssomelicens{
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  height: 70px;
+  border: 1px solid rgb(191, 191, 191);
+  user-select: none;
+  padding: 10px;
+  margin: 5px;
+  background-color: #fff;
+  color: #333;
+}
+.titllicespip{
+  font-weight: 400;
+}
+
+.driver-dragging {
+  opacity: 0.5;
+  background-color: #e0e0e0; /* Example color */
+}
+.pipeline-drag-over {
+  background-color: #f0f0f0; /* Example color */
+}
+.driver-picture img{
+  border-radius:50% ;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+.geeraliindiv1dfr{
+  display: flex;
+
+  justify-content: flex-start;
+
+}
+
+.status-indicator {
+  position: absolute;
+  right: -7px; /* Adjust to position the indicator correctly within the picture */
+  bottom: 5px; /* Adjust to position the indicator correctly within the picture */
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid white; /* Makes the indicator stand out against the picture */
+}
+
+
+.status-indicator.active {
+  background-color: #4CAF50;
+}
+
+.status-indicator.inactive {
+  background-color: #9E9E9E;
+}
+
+.status-indicator.sick {
+  background-color: #2196F3;
+}
+
+.status-indicator.holiday {
+  background-color: #FF9800;
+}
+
+.status-indicator.over-hours {
+  background-color: #FFEB3B;
+}
+
+.status-indicator.work-accident {
+  background-color: #F44336;
+}
+.extra-drivers-indicator {
+  font-size: 16px; /* Adjust size as needed */
+  color: #666; /* Adjust color as needed */
+ padding: 0px;
+ padding-top: 0px;
+}
+.morecarinfosis{
+  color: #c3056a;
+  font-weight: 500;
+}
+.driver-picture {
+  position: relative; /* Ensures that absolute-positioned children are positioned relative to this container */
+  width: 70px; /* Adjust based on your design */
+  height: 70px; /* Adjust based on your design */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; /* Adjust spacing between the picture and the driver's name */
+}
+.dlhalle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 160px; /* Adjust based on your layout's needs */
+}
+
+
+.driverssomelicensMAIN::-webkit-scrollbar { 
+  display: none; /* Chrome, Safari, Opera*/
+}
+.driverssomelicensMAIN {
+  max-height: 800px; /* Adjust based on your needs */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  width: 100%;
+}
+
+.driverssomelicensMAIN::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+.infolices{
+  width: 100%;
+}
+.driverssomelicens {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%; /* Ensures the div does not shrink */
+  max-width: 100%; /* Ensures the div does not expand */
+  height: 130px;
+  border: 1px solid rgb(191, 191, 191);
+  user-select: none;
+  padding: 10px;
+  margin: 5px 0; /* Adjusted for vertical spacing */
+  background-color: #fff;
+  color: #333;
+}
+.driverssomelicensp {
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%; /* Ensures the div does not shrink */
+  max-width: 100%; /* Ensures the div does not expand */
+  height: 90px;
+  border: 1px solid rgb(191, 191, 191);
+  user-select: none;
+  padding: 10px;
+  margin: 5px 0; /* Adjusted for vertical spacing */
+  background-color: #fff;
+  color: #333;
+}
+.titllicespip {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.filasmarginoop{
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.filasmarginoop span{
+  color: #004085;
+  font-weight: 500;
+  margin-right: 3px;
+}
+
+.filasmarginoopp{
+  display: flex;
+  justify-content: flex-start;
+}
+.filasmarginoopp span{
+  color: #004085;
+  font-weight: 500;
+  margin-right: 3px;
+}

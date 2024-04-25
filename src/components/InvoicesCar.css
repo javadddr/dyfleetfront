@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+.invoices-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.invoices-list {
+  margin-bottom: 20px;
+}
+
+.invoice-item {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.invoice-item p {
+  margin: 5px 0;
+}
+
+.add-invoice-form {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+
+}
+
+.add-invoice-form h4 {
+  margin-top: 0;
+}
+
+
+.add-invoice-form select,
+.add-invoice-form button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-invoice-form button {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-invoice-form button:hover {
+  background-color: #45a049;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+/* Assuming you've imported or have existing styles above this point */
+
+.add-invoice-form {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease-out, opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-visible {
+  max-height: 500px; /* Adjust based on the form size */
+  opacity: 1;
+  pointer-events: auto;
+  background-color: #ffffff;
+}
+
+.driverassititleanddateo{
+  display: flex;
+ justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.driverassititleanddateo select{
+width: 15%;
+margin-right: 10px;
+font-size: 1rem;
+}
+.driverassititleanddateo input{
+ height: 43px;
+  margin-right: 10px;
+  font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  }
+  .driverassititleanddateo button{
+    width: 150px;
+  }
+
+  .invoices-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .invoices-list th, .invoices-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .invoices-list th {
+    background-color: black;
+    color: rgb(251, 251, 251);
+  font-family:'inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: 400;
+border-right: 1px solid white;
+  }
+  
+  
+  
+  .invoices-list tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Fixed width for table columns */
+  .invoices-list th:nth-child(1), .invoices-list td:nth-child(1) { width: 20%; }
+  .invoices-list th:nth-child(2), .invoices-list td:nth-child(2) { width: 15%; }
+  .invoices-list th:nth-child(3), .invoices-list td:nth-child(3) { width: 20%; }
+  .invoices-list th:nth-child(4), .invoices-list td:nth-child(4) { width: 15%; }
+  .invoices-list th:nth-child(5), .invoices-list td:nth-child(5) { width: 15%; }
+  .invoices-list th:nth-child(6), .invoices-list td:nth-child(6) { width: 15%; }
+  
+  /* Ensure text wraps if it exceeds the width */
+  .invoices-list td {
+    white-space: normal;
+   
+  }
+
+.deleteinfoice{
+  display: flex;
+justify-content: center;
+}
+.modeldeleteinvoiceid{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(226, 220, 220, 0.5); /* Semi-transparent black background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure it's above everything else */
+}
+.delete-confirmation {
+  position: fixed; /* Fixed position to stay in view */
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  z-index: 100; /* Ensure it's above other content */
+  border-radius: 5px;
+  width: 400px; /* Fixed width */
+  border: 1px solid rgb(214, 214, 214);
+}
+.deleteinvoicepop{
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+
+  height: 180px;
+
+}
+.deleteinvoicepop p{
+  margin-bottom: 20px;
+
+}
+
+.delete-confirmation p {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  margin-bottom: 35px;
+  font-size: 1.2rem;
+}
+
+.delete-confirmation button {
+  margin: 0 5px;
+}
+.deleteinvoice{
+  display: flex;
+
+justify-content: center;}
+
+.deleteinvoicepopbut{
+  display: flex;
+  justify-content: space-between;
+}
+.nodeletingacar{
+  background-color: #cfc8fd; /* Red color for cancel */
+  color: rgb(255, 255, 255);
+  font-family:'roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 300;
+  color: black;
+  width: 100px;
+}
+
+.buttonassign button{
+  display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 190px;
+    background-color: #0843bf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+
+    margin-top: 20px;
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn.btn-danger{
+  background-color: #ffffff;
+  border: none;
+ 
+}

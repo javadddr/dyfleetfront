@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+.main-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #f0f2f5;
+}
+
+.sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background-color: #f0f0f0; /* Updated sidebar color */
+  color: #333; /* Darker text color for contrast */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+
+}
+.top-section{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+  
+
+}
+
+
+.logo {
+  display: flex;
+
+  font-size: 20px;
+  color: #000000;
+  width:59%;
+
+}
+
+.name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  font-size: 22px;
+  color: #000000; /* Lighter for a modern look */
+  margin-left: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.sidebar button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: none;
+  border: none;
+  color: #767575; /* Darker color for better readability */
+  padding: 10px 0;
+  margin: 2px 0;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s, padding-left 0.3s;
+  font-size: 1.4rem; /* Larger font size for readability */
+  border-bottom: 1px solid #dee2e6; 
+  padding-left: 10px; /* Indent text to align with content */
+  font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.iconbusid{
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+
+.sidebar button:hover {
+  color: #212529; /* Even darker on hover/active */
+  background-color: #e9ecef; /* Light background on hover/active */
+ 
+}
+.sidebar button.active{
+  color: #ffffff; /* Even darker on hover/active */
+  background-color: #a091fb; /* Light background on hover/active */
+  border-radius: 5px;
+}
+.sidebar button:hover {
+  padding-left: 23px; /* Move text on hover */
+}
+
+.bottom-icons div {
+  margin: 10px 0;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.bottom-icons div:hover {
+  transform: scale(1.05);
+}
+.bottom-icons img{
+  margin-right: 3px;
+}
+
+.user-info {
+  display: none;
+  position: absolute;
+  bottom: 16.5%;
+  left: 49%;
+  width: 100%;
+  background-color: #ffffff;
+  color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.15);
+  animation: slideUp 0.5s ease-out forwards;
+  color: #000000;
+}
+.help-info{
+  display: none;
+  position: absolute;
+  bottom: 13.5%;
+  left: 49%;
+  width: 100%;
+  background-color: #ffffff;
+  color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.15);
+  animation: slideUp 0.5s ease-out forwards;
+  color: #000000;
+}
+.settings-info{
+  display: none;
+  position: absolute;
+  bottom: 10%;
+  left: 49%;
+  width: 100%;
+  background-color: #ffffff;
+  color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.15);
+  animation: slideUp 0.5s ease-out forwards;
+  color: #000000;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.user-info.active {
+  display: block;
+  width: 100%;
+  z-index: 1000;
+}
+.help-info.active{
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  z-index: 1000;
+}
+.settings-info.active{
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  z-index: 1000;
+}
+
+.user-info button {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  background-color: #fc9402;
+  color: #000000;
+  border: none;
+font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 120px;
+}
+
+#dicldocwor{
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  background-color: #fc9402;
+  color: #000000;
+  border: none;
+font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 120px;
+}
+#dicldocwor:hover{
+  padding-left:10px;
+  background-color: #f6c177;
+}
+.user-info button:hover {
+  background-color: #9366ed;
+  
+}
+/* Hover effect on the button also affects the image inside */
+.sidebar button:hover img {
+  opacity: 1;
+}
+.sidebar button:active img {
+  opacity: 1;
+}
+.page-content {
+  flex-grow: 1;
+  position: relative; /* Needed for absolute positioning of overlay */
+  background-color: #ffffff;
+  overflow-y: auto;
+  width: 100%; /* Ensures full width */
+}
+.sidebotti{
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 50px;
+  
+}
+.sidebotti  img{
+ opacity: 0.5;
+  
+}
+.sidebotti img:hover{
+  opacity: 1;
+   
+ }
+.aicon{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.setlinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 7px;
+  transition: background-color 0.4s ease; /* Add this line */
+}
+.setlinks span{
+  margin-top: 4px;
+  margin-left: 3px;
+}
+.setlinks:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+.settings-info.active h4{
+  margin: 5px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-left: 15px;
+  border-bottom: 1px solid rgb(182, 182, 182);
+  padding-bottom: 7px;
+  margin-bottom: 1px;
+  color: blue;
+}
+.help-info.active h4{
+  margin: 5px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-left: 15px;
+  border-bottom: 1px solid rgb(182, 182, 182);
+  padding-bottom: 7px;
+  margin-bottom: 1px;
+  color: blue;
+}
+.help-info.active p:hover {
+  background-color: rgb(228, 228, 228);
+}
+.help-info.active p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 2px;
+  padding-left: 7px;
+margin: 0px;
+  transition: background-color 0.3s ease; /* Add this line */
+  height: 40px;
+}
+.user-info-detail {
+
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflow */
+  white-space: nowrap; /* Prevent wrapping to a new line */
+}
+.user-info-detail span {
+  display: block; /* Makes the span take the full width, effectively acting like a block-level element */
+  position: relative;
+  padding-bottom: 5px; /* Adds some spacing between the text and the line */
+  padding-top: 20px;
+  color: blue;
+}
+
+.user-info-detail span::after {
+  content: ''; /* Required for a pseudo-element */
+  position: absolute;
+  left: 0;
+  bottom: 0; /* Aligns the pseudo-element with the bottom of the span */
+  width: 100%; /* Ensures the line spans the full width of the span */
+  height: 1px; /* Thickness of the line */
+  background-color: #ccc; /* Color of the line */
+}
+
+
+.cardtrial {
+
+  position: relative;
+  width: 210px;
+  height: 130px;
+  background: rgb(199, 246, 245);
+  display: flex;
+align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.cardtrial::before,
+.cardtrial::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: lightblue;
+  transition: all 0.5s;
+}
+
+.cardtrial::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.cardtrial::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100%  0 15px;
+}
+
+.cardtrial:hover::before,
+.cardtrial:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.cardtrial:hover:after {
+  content: "Subscribe!";
+}
+
+.cardtrial h1{
+  font-size: 15px;
+
+  color: rgb(212, 112, 24);
+
+
+}
+
+.blur-content {
+  filter: blur(4px);
+  pointer-events: none;
+  /* width: 100%; */
+}
+
+.overlay-subscribe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.overlay-subscribe button{
+  border-radius: 5px;
+  width: 50%;
+  height: 60px;
+  font-size: 22px;
+}
+.overlay-subscribe button:hover{
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  background-color: #173ad7;
+}
+
+.capacityinfomain{
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  margin: 0px;
+  border: 1px solid #949494;
+  padding: 3px;
+  border-radius: 5px;
+  
+}
+#capacityinfomain1{
+  margin: 0px;
+  color: #949494;
+}
+#capacityinfomain2{
+  margin: 0px;
+  color: #000000;
+}
+

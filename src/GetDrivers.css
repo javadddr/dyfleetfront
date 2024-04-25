@@ -1,0 +1,152 @@
+/* Updated GetDrivers.css */
+.drivers-container {
+  display: flex;
+
+  gap: 20px;
+  padding: 20px;
+}
+
+.status-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+
+/* Style for active (clicked) buttons */
+button.active {
+  background-color: #004085; /* Darker shade for active state */
+  color: #fff;
+}
+.filasmargin{
+  display: flex;
+ 
+}
+.geeraliindiv1{
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.geeraliindiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 5;
+}
+.doint{
+  margin-left: 4%;
+  color: rgb(51, 154, 239);
+  font-weight: 500;
+  display: flex;
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap; /* Prevent wrapping onto a new line */
+  text-overflow: ellipsis; /* Use ellipsis for overflow */
+width: 160%;
+
+}
+.ddddssx{
+display: flex;
+justify-content: flex-start;
+}
+.geeraliindiv2{
+  display: flex;
+  justify-content: space-between;
+
+}
+.doint1 {
+  margin-left: 0%;
+  color: brown;
+  font-weight: 500;
+  display: flex;
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap; /* Prevent wrapping onto a new line */
+  text-overflow: ellipsis; /* Use ellipsis for overflow */
+width: 200px;
+
+}
+.ddddssx span{
+
+  color: rgb(51, 154, 239);
+  font-weight: 500;
+  display: flex;
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap; /* Prevent wrapping onto a new line */
+  text-overflow: ellipsis; /* Use ellipsis for overflow */
+margin-right:10px;
+}
+
+.geeraliindiv3{
+  display: flex;
+  justify-content: space-between;
+
+  text-align: center;
+
+}
+
+
+.driver-card {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: white;
+ padding-left: 10px;
+  border-radius: 5px;
+  cursor: grab;
+  min-height: 120px;
+  max-height: 120px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.driver-card:active {
+  cursor: grabbing;
+}
+
+.piplinedriver {
+  display: flex;
+}
+
+.geeraliindiv1 span{
+  color: #004085;
+  font-weight: 500;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+.filasmargin span{
+  color: #004085;
+  font-weight: 500;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+.driver-card img {
+  width: 90px; /* Adjust based on your preference */
+  height: 90px;
+  border-radius: 50%; /* Circular images for drivers */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+
+.didiv{
+display: flex;
+justify-content: space-between;
+}
+.picture-containerooppp img{
+  border-radius: 50%; /* Circular images for drivers */
+margin-top: 7%;
+margin-right: 20%;
+}
+
+

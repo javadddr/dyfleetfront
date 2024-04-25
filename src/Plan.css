@@ -1,0 +1,352 @@
+/* Reset margins and padding for consistency */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Roboto:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap');
+
+
+
+.pmain {
+  background-image: url("./bb.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+.rangvp{
+  color: white;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.pmain2 {
+
+  background: #f8f6ef;
+  backdrop-filter: blur(16px);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  font-family:'Poppins','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  flex: 2;
+}
+.disprichishode{
+  color: white;
+  font-size: 19px;
+  margin-top: 180px;
+}
+.checkm{
+  font-size: 18px;
+}
+
+.cards {
+  flex: 2;
+  display: flex;
+justify-content: center;
+
+  margin: 15px 3%;
+  width: 100%;
+}
+.choosedfg{
+  flex: 1;
+  margin: 15px 3%;
+}
+.topnote h1{
+  color: blue;
+  font-size: 26px;
+
+}
+
+
+.prititin1{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 20px;
+}
+.prititin2{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.prititin{
+  display: flex;
+  flex-direction: column;
+}
+.prititin1 p{
+margin-left: 10px;
+}
+.prititin p{
+  font-size: 13px;
+}
+.prititin2 p{
+  margin-left: 10px;
+  }
+  
+
+.card {
+  background-color: #f5f5f6;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  flex: 1;
+  margin: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.checkandtext {
+  display: flex;
+  align-items: center;
+ 
+}
+
+.iconprice {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+
+.forfree a {
+  text-decoration: none;
+}
+.forfree1 a {
+  text-decoration: none;
+}
+.topnote span{
+  color: #086229;
+  font-size: 18px;
+  font-weight: bold;
+  font-family:'inter','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.tf span{
+  color: #086229;
+  font-size: 20px;
+  font-weight: bold;
+}
+.forfree button {
+  font-size: 18px;
+  padding: 8px 13px;
+  background-color: #113b12;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  display: block; /* Ensure the button spans the width of the container */
+  width: 100%;
+  text-align: center;
+}
+.forfree1 button {
+  font-size: 15px;
+  padding: 6px 10px;
+  background-color: #113b12;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+  display: block; /* Ensure the button spans the width of the container */
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.tf{
+  font-size: 24px;
+}
+.tf p{
+  font-size: 20px;
+} 
+
+
+.forfree button:hover {
+  background-color: #0cc652;
+}
+.forfree1 button:hover {
+  background-color: #0cc652;
+}
+
+
+/* Reintroduced styles for green squares */
+.greenSquare {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -35px;
+  width: 88px;
+  height: 88px;
+  background-color: #0cc652;
+  opacity: 0.2;
+  border-radius: 8px;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+.greenSquare2 {
+  position: absolute;
+  content: "";
+  top: 35px;
+  right: -35px;
+  width: 88px;
+  height: 88px;
+  background-color: #0cc652;
+  opacity: 0.2;
+  border-radius: 8px;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+.card1 {
+  display: flex;
+  flex-direction: column;
+height: 900px;
+  width:450px;
+  min-width:400px;
+  border: 1px solid black;
+  padding: 20px;
+  justify-content: space-evenly;
+  background-color: #f5f5f6;
+  margin-right: 10px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden; /* Add this line to hide the overflow */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+.card1:hover{
+  background-color: #e1f9e2;
+  box-shadow: rgba(232, 223, 223, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.topnote{
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+}
+.topnote2{
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  font-size: 19px;
+  justify-content: space-between;
+}
+.topnote21{
+  font-size: 19px;
+  height: 17%;
+}
+.actpri{
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  font-size: 19px;
+  justify-content: space-between;
+}
+.actpri1{
+  display: flex;
+  flex-direction: column;
+  height: 4%;
+  font-size: 19px;
+  justify-content: space-between;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 1024px) {
+  .cards {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    width: auto;
+    margin: 10px auto; /* Center cards on smaller screens */
+  }
+  .pmain2{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+
+@media (max-width: 1100px) {
+
+  .card1 {
+   
+    height: 500px;
+    width: 90%;
+    margin-bottom: 20px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .1);
+  
+  }
+  .pmain2{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 768px) {
+  .disprichishode{
+    margin-top: 20px;
+  }
+  .pmain2{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.planicon{
+  display: flex;
+  align-items: center;
+
+}
+.planicon span{
+  color: rgb(10, 10, 140);
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 19px;
+  margin-right: 10px;
+}
+.planicon img{
+  margin-right: 10px;
+  width: 7%;
+}
+.planiconws span{
+  color: rgb(10, 10, 140);
+  font-weight: bold;
+  margin-left: 10px;
+  font-size: 19px;
+  margin-right: 10px;
+}
+.planiconws{
+  margin-bottom: 20px;
+}
+.plaininfoford{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 6px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  height: 17%;
+  background-color: rgb(213, 246, 246);
+
+  border: 1px solid rgb(0, 0, 0);
+ 
+ 
+  
+}
+.planicuroft{
+  margin-top: 19%;
+  font-size: 23px;
+}
+#justhdes{
+  padding-bottom: 40px;
+}
