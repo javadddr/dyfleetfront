@@ -5,10 +5,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 .formfineop{
-
+font-size: 13px;
   margin: 10px;
   display: flex;
   flex-direction: column;
+  height: 200px;
 }
 .typdatefine{
   margin-left: 20px;
@@ -73,21 +74,26 @@
   font-weight: 500;
   color: rgb(255, 255, 255);
   height: 40px;
-  font-size: 1.1rem;
+  font-size: 13px;
   border-right: 1px solid rgb(255, 255, 255);
 
   text-align: center;
 
 
 }
+.trfingerefratth tbody{
+  font-size: 13px;
+}
 .trfingerefrat:hover{
   background-color: rgb(63, 63, 63);
+  font-size: 14px;
 }
 .trfingerefratth thead{
   background-color: rgb(63, 63, 63);
 }
 .trfingerefratth thead:hover{
   background-color: rgb(63, 63, 63);
+  font-size: 14px;
 }
 .exportisod{
   display: flex;
@@ -101,6 +107,7 @@
 .trfingerefratth td{
   border-right: 1px solid rgb(209, 207, 207);
   border-bottom: 1px solid rgb(209, 207, 207);
+  font-size: 12px;
 }
 .css-11jnun4-MuiStack-root{
   margin-left: 10px;
@@ -117,9 +124,9 @@
   top: 0;
   left: 0;
   z-index: 1040;
-  width: 125vw;
+  width: 100%;
   
-  height: 125vh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
@@ -133,6 +140,7 @@
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   z-index: 1050;
+  height: 800px;
 }
 /* Add styling for animation */
 .modal-enter {
@@ -162,15 +170,15 @@
   text-align: center;
   align-items: center;
   cursor: pointer;
-  padding: 10px 5px;
+  padding: 5px 4px;
   padding-left: 0px;
   padding-right: 0px;
-  width: 200px;
+  width: 130px;
   background-color: #0843bf;
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 1.1rem;
+  font-size: 14px;
   margin-right: 30px;
   margin-top: 20px;
   font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -178,15 +186,15 @@
 #closessd{
   
   float: right;
-    font-size: 1.1rem;
+    font-size: 14px;
     cursor: pointer;
     background: rgb(251, 199, 199);
     color: black;
     cursor: pointer;
-    padding: 10px 5px;
+    padding: 5px 4px;
     padding-left: 0px;
     padding-right: 0px;
-    width: 200px;
+    width: 130px;
 }
 
 .typdatefinevvb{
@@ -207,11 +215,32 @@
   height: 50px;
 }
 .isufinvvb{
-  height: 60px;
+  height: 40px;
+  font-size: 13px;
 }
 .typdatefinevvbisufinvvb{
   color: #0843bf;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 19px;
 }
 
+.trfingerefratth tbody{
+  font-size: 13px;
+}
+#issueDate{
+  width: 250px;
+  margin-right: 1.3%;
+  height: 35px;
+}
+
+#occureDate{
+  width: 250px;
+  margin-right: 1.3%;
+  height: 35px;
+}
+
+#dueDate{
+  width: 250px;
+  margin-right: 1.3%;
+  height: 35px;
+}

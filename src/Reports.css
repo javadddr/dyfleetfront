@@ -25,7 +25,7 @@ background-color: azure;
   top: 95%;
   left: 50%;
   transform: translate(-50%, -50%); /* Center the button exactly on the image */
-  padding: 10px 20px;
+  padding: 5px 10px;
   background-color: #0843BF;
   color: white;
   border: none;
@@ -34,6 +34,7 @@ background-color: azure;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   min-width: 200px;
   max-width: 350px;
+  font-size: 14px;
 }
 
 .download-btn:hover {
@@ -46,9 +47,9 @@ background-color: azure;
 }
 
 .repmainti h1 {
-  font-size: 1.8rem;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  font-size: 1.3rem;
+  padding-bottom: 20px;
+  padding-top: 20px;
   position: relative; /* Needed for absolute positioning of the pseudo-element */
   margin-bottom:10px;
   color: white;

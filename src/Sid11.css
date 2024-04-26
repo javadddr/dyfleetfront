@@ -25,13 +25,16 @@
 }
 .geeraliindiv1dfr span{
   color: #004085;
-  font-weight: 500;
+  font-weight: 400;
   margin-right: 3px;
+  font-size: 14px;
 }
 .search-inputpp{
   width: 15%;
-  height: 40px;
+  height: 33px;
   padding-left: 10px;
+  font-size: 14px;
+  border-radius: 5px;
 }
 .search-bar-container input{
   border: 1px solid black;
@@ -45,7 +48,7 @@
 align-items: center;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   margin-bottom: 10px;
-  min-height: 60px;
+  min-height: 50px;
 }
 .status-Noorexpiredinspection .titllicespipo {
   background-color: #f7dbdb;
@@ -104,7 +107,7 @@ width: 300px;
   display: flex;
   justify-content: space-between;
   width: 95%;
-  height: 70px;
+  height: 100px;
   border: 1px solid rgb(191, 191, 191);
   user-select: none;
   padding: 10px;
@@ -131,7 +134,7 @@ width: 300px;
 }
 .geeraliindiv1dfr{
   display: flex;
-
+  font-size: 14px;
   justify-content: flex-start;
 
 }
@@ -193,7 +196,7 @@ width: 300px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  width: 160px; /* Adjust based on your layout's needs */
+  width: 130px; /* Adjust based on your layout's needs */
 }
 
 
@@ -205,33 +208,35 @@ width: 300px;
   overflow-y: auto; /* Enable vertical scrolling */
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
-  width: 100%;
+
 }
 
 .driverssomelicensMAIN::-webkit-scrollbar {
   display: none; /* For Chrome, Safari, and Opera */
 }
 .infolices{
-  width: 100%;
+  width: 350px;
+  font-size: 14px;
 }
 .driverssomelicens {
   display: flex;
   justify-content: space-between;
-  min-width: 100%; /* Ensures the div does not shrink */
-  max-width: 100%; /* Ensures the div does not expand */
-  height: 130px;
+  min-width: 270px; /* Ensures the div does not shrink */
+  max-width: 270px; /* Ensures the div does not expand */
+
   border: 1px solid rgb(191, 191, 191);
   user-select: none;
   padding: 10px;
   margin: 5px 0; /* Adjusted for vertical spacing */
   background-color: #fff;
   color: #333;
+  font-size: 13px;
 }
 .driverssomelicensp {
   display: flex;
   justify-content: space-between;
-  min-width: 100%; /* Ensures the div does not shrink */
-  max-width: 100%; /* Ensures the div does not expand */
+  min-width: 274px; /* Ensures the div does not shrink */
+  max-width: 274px; /* Ensures the div does not expand */
   height: 90px;
   border: 1px solid rgb(191, 191, 191);
   user-select: none;
@@ -241,7 +246,7 @@ width: 300px;
   color: #333;
 }
 .titllicespip {
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-align: center;
   margin-bottom: 0px;
 }

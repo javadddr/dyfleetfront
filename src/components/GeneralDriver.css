@@ -1,12 +1,13 @@
 .GEN-CAR-delete-button1{
   background-color: #be0404;
-  margin-top: 20px;
 
+padding:4px;
   font-family:'roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 300;
   color: rgb(255, 255, 255);
-  width: 200px;
-  font-size: 1rem;
+  width: 150px;
+  font-size: 14px;
+  border-radius: 5px;
   margin-top: 20%;
 }
 .fingeraterscan{

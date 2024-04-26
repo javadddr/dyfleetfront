@@ -240,10 +240,10 @@ function DriversOfDriver({ driver: propDriver }) {
                     xAxis='Percentage'
                     yAxis='Status'
                     showTooltip = {true}
-                    borderWidth={2}
+                    borderWidth={1}
                     showValues={true}
                     valueDisplayPosition='top' 
-                    valueFontSize = '0.9rem'
+                    valueFontSize = '12px'
                     valueFontFamily = 'inter'
                     showTicks = {false}
                     showYLabels = {true}
@@ -252,7 +252,7 @@ function DriversOfDriver({ driver: propDriver }) {
                     gridNumber={5}
                     gridColor="green"
                     sort='za'  //az,za,n
-                    barHeight = {30}
+                    barHeight = {17}
                     spacingBetweenBars = {3}
                     cWidth = {500}
                     margin={{ left: 0, right: 0, top: 0, bottom: 0 }}

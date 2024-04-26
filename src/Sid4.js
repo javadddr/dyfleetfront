@@ -218,8 +218,9 @@ const [tempDescription, setTempDescription] = useState("");
     }
   };
 
-  const handleChangeDate = (name) => (newValue) => {
-    setForm({ ...form, [name]: newValue });
+  const handleChangeDate = (event) => {
+    const { name, value } = event.target;
+    setForm({ ...form, [name]: value });
   };
 
 
@@ -425,220 +426,189 @@ const [tempDescription, setTempDescription] = useState("");
         Add New Fine
         </div>
         <div className="isufinvvb">
-          <div>Type of the fine:</div>
-          <Autocomplete
-            disablePortal
-            id="type-combo-box"
-            value={form.type ? fineTypes.find(option => option.value === form.type) : null}
-            onChange={(event, newValue) => {
-              setForm({ ...form, type: newValue ? newValue.value : '' });
-            }}
-            options={fineTypes}
-            sx={{
-              '& > :not(style)': { m: 1, width: '250px' },
-            }}
-            renderInput={(params) => <TextField {...params} label="Type" required/>}
-          />
-      </div>
+  <div>Type of the fine:</div>
+  <select
+    id="type-combo-box"
+    name="type"
+    value={form.type || ''}
+    onChange={handleChange}
+    required
+    style={{ width: '250px', height: '35px', margin: '8px' }}
+  >
+    <option value="">Select Fine Type</option>
+    {fineTypes.map((option) => (
+      <option key={option.value} value={option.value}>
+        {option.label}
+      </option>
+    ))}
+  </select>
+</div>
+
       <div>
-<LocalizationProvider dateAdapter={AdapterDayjs}>
+
   <div className="isufinvvb">
   <div>Fine's Issue Date:</div>
-        <DatePicker
-          label="Issue Date"
-          value={form.issueDate}
-          sx={{
-            m: 1, width: '250px' ,
-        }}
-          onChange={handleChangeDate('issueDate')}
-          renderInput={(params) => <TextField {...params} required  sx={{ width: '70px' }} />}
-          
+        <input
+          type="date"
+          id="issueDate"
+          name="issueDate"
+          value={form.issueDate || ''}
+          onChange={handleChangeDate}  // Using the specialized handler
+          required
         />
         </div>
         <div className="isufinvvb">
   <div>Fine's Occur Date:</div>
-        <DatePicker
-          label="Occur Date"
-          value={form.occureDate}
-          sx={{
-            m: 1, width: '250px' ,
-        }}
-          onChange={handleChangeDate('occureDate')}
-          renderInput={(params) => <TextField {...params} required />}
-          
-        />
+  <input
+      type="date"
+      id="occureDate"
+      name="occureDate"
+      value={form.occureDate || ''}
+      onChange={handleChangeDate}
+      required
+    />
         </div>
         <div className="isufinvvb">
   <div>Fine's Due Date:</div>
-        <LocalizationProvider dateAdapter={AdapterDayjs} >
-        <DatePicker
-          label="Due Date"
-          value={form.dueDate}
-          sx={{
-              m: 1, width: '250px' ,
-          }}
-          onChange={handleChangeDate('dueDate')}
-          renderInput={(params) => <TextField {...params} />}
-          
-        />
-        </LocalizationProvider>
+  <input
+      type="date"
+      id="dueDate"
+      name="dueDate"
+      value={form.dueDate || ''}
+      onChange={handleChange}
+      required
+    />
           </div>
           <div className="isufinvvb">
   <div>Fine's Description:</div>
-          <Box
-          sx={{
-            '& > :not(style)': { m: 1, width: '250px' },
-          }}
-          noValidate
-          autoComplete="off"
-        >
-          <TextField
-            id="description"
-            name="description"
-            label="Description"
-            variant="outlined"
-            value={form.description}
-            onChange={handleChange}
-            required
-            fullWidth // Added for full width
-          />
-        </Box>
-        </div>
-        <div className="isufinvvb">
-  <div>Fine's Amount</div>
-        <Box  sx={{
-            '& > :not(style)': { m: 1, width: '250px' },
-          }}>
-          
-  <TextField
+  <input
+    type="text"
+    id="description"
+    name="description"
+    value={form.description || ''}
+    onChange={handleChange}
+    required
+    style={{ width: '250px', height: '35px', margin: '8px' }}
+  />
+</div>
+
+<div className="isufinvvb">
+  <div>Fine's Amount:</div>
+  <input
+    type="number"
     id="cost"
     name="cost"
-    label="Cost"
-    variant="outlined"
-    value={form.cost}
+    value={form.cost || ''}
     onChange={handleChange}
-    fullWidth
     required
+    style={{ width: '250px', height: '35px', margin: '8px' }}
+    min="0" // Optional: Ensures that only non-negative values are entered
   />
-</Box>
-          </div>
-      </LocalizationProvider>
+</div>
+
+     
       </div>
         </div>
 
         <div className='typdatefinevvb' style={{width: '100%'}}>
         <div className="isufinvvb">
   <div>Issued For:</div>
-        <Autocomplete
-          disablePortal
-          id="for-combo-box"
-          value={form.for ? fineForOptions.find(option => option.value === form.for) : null}
-          onChange={(event, newValue) => {
-            setForm({ ...form, for: newValue ? newValue.value : '' });
-          }}
-          options={fineForOptions}
-          sx={{
-            '& > :not(style)': { m: 1, width: '250px' },
-          }}
-          renderInput={(params) => <TextField {...params} label="For" required />}
-        />
+  <select
+    id="for-combo-box"
+    name="for"
+    value={form.for || ''}
+    onChange={handleChange}
+    required
+    style={{ width: '250px', height: '35px', margin: '8px' }}
+  >
+    <option value="">Select Issued For</option>
+    {fineForOptions.map((option) => (
+      <option key={option.value} value={option.value}>
+        {option.label}
+      </option>
+    ))}
+  </select>
 </div>
+
 <div className="isufinvvb">
   <div>Driver Name:</div>
-            <Autocomplete
-              disablePortal
-              id="driver-name-autocomplete"
-              options={driverOptions}
-              sx={{
-                '& > :not(style)': { m: 1, width: '250px' },
-              }}
-              value={driverOptions.find(option => option.value === form.driverName) || null} // Find the currently selected driver based on form.driverName
-              onChange={(event, newValue) => {
-                setForm({ ...form, driverName: newValue ? newValue.value : '' });
-              }}
-              renderInput={(params) => <TextField {...params} label="Driver Name" />}
-            />
-            </div>
-            <div className="isufinvvb">
+  <select
+    id="driver-name-select"
+    name="driverName"
+    value={form.driverName || ''}
+    onChange={handleChange}
+    style={{ width: '250px', height: '35px', margin: '8px' }}
+  >
+    <option value="">Select Driver</option>
+    {driverOptions.map((option) => (
+      <option key={option.value} value={option.value}>
+        {option.label}
+      </option>
+    ))}
+  </select>
+</div>
+
+<div className="isufinvvb">
   <div>Vehicle Name:</div>
-              <Autocomplete
-  disablePortal
-  id="car-name-autocomplete"
-  options={carOptions}
-  sx={{
-    '& > :not(style)': { m: 1, width: '250px' },
-  }}
-  value={carOptions.find(option => option.value === form.carName) || null} // Find the currently selected car based on form.carName
-  onChange={(event, newValue) => {
-    setForm({ ...form, carName: newValue ? newValue.value : '' });
-  }}
-  renderInput={(params) => <TextField {...params} label="Vehicle Name" />}
-/>
+  <select
+    id="vehicle-name-select"
+    name="carName"
+    value={form.carName || ''}
+    onChange={handleChange}
+    style={{ width: '250px', height: '35px', margin: '8px' }}
+  >
+    <option value="">Select Vehicle</option>
+    {carOptions.map((option) => (
+      <option key={option.value} value={option.value}>
+        {option.label}
+      </option>
+    ))}
+  </select>
 </div>
 <div className="isufinvvb">
-<div className='isufinvvb3'>Fine's Status:</div>
-  <div className='isufinvvb4'>
-        <Autocomplete
-          disablePortal
-          id="status-combo-box"
-          value={form.status ? fineStatuses.find(option => option.value === form.status) : null}
-          onChange={(event, newValue) => {
-            setForm({ ...form, status: newValue ? newValue.value : '' });
-          }}
-          options={fineStatuses}
-          sx={{
-            '& > :not(style)': { m: 1, width: '250px' },
-          }}
-          renderInput={(params) => <TextField {...params} label="Status" required />}
-        />
-         </div>
-        </div>
-        <div className="isufinvvb">
-        <div className='isufinvvb3'>Which place issued the fine:</div>
-  <div className='isufinvvb4'>
+  <div>Fine's Status:</div>
+  <select
+    id="status-select"
+    name="status"
+    value={form.status || ''}
+    onChange={handleChange}
+    style={{ width: '250px', height: '35px', margin: '8px' }}
+  >
+    <option value="">Select Status</option>
+    {fineStatuses.map((status) => (
+      <option key={status.value} value={status.value}>
+        {status.label}
+      </option>
+    ))}
+  </select>
+</div>
 
+<div className="isufinvvb">
+  <div>Which place issued the fine:</div>
+  <input
+    type="text"
+    id="issuedFrom"
+    name="issuedFrom"
+    value={form.issuedFrom || ''}
+    onChange={handleChange}
+    required
+    style={{ width: '250px', height: '35px', margin: '8px' }}
+  />
+</div>
 
-<Box
-           sx={{
-            '& > :not(style)': { m: 1, width: '250px' },
-          }}
-        >
-          <TextField
-            id="issuedFrom"
-            name="issuedFrom"
-            label="Issued From"
-            variant="outlined"
-            value={form.issuedFrom}
-            onChange={handleChange}
-            fullWidth
-          />
-        </Box>
-        </div>
-        </div>
-        <div className="isufinvvb">
-  <div className='isufinvvb3'>Location of the incident:</div>
-  <div className='isufinvvb4'>
-        <Box
-          sx={{
-            '& > :not(style)': { m: 1, width: '250px' },
-          }}
-        >
-          <TextField
-            id="location"
-            name="location"
-            label="Location"
-            variant="outlined"
-            value={form.location}
-            onChange={handleChange}
-            fullWidth
-            sx={{
-              width: '150px'
-            }}
-          />
-          
-        </Box>
-        </div>
-        </div>
+<div className="isufinvvb">
+  <div>Location of the incident:</div>
+  <input
+    type="text"
+    id="location"
+    name="location"
+    value={form.location || ''}
+    onChange={handleChange}
+    required
+    style={{ width: '250px', height: '35px', margin: '8px' }}
+  />
+</div>
+
         </div>
     
         <div className='typdatefine1o' style={{width: '100%',marginTop:'15px'}}>
@@ -780,7 +750,7 @@ const [tempDescription, setTempDescription] = useState("");
               <td>{fine.file ? <a href={`${process.env.REACT_APP_BACKEND_URL}/fines/${fine.file}`} target="_blank" rel="noopener noreferrer">See Fine</a> : 'No File'}</td>
               <td style={{ textAlign:'center'}}>
                
-              <img src={del} alt="Delete" style={{ cursor: 'pointer', width: '25%' }} onClick={() => handleDeleteClick(fine._id)} />
+              <img src={del} alt="Delete" style={{ cursor: 'pointer', width: '35%' }} onClick={() => handleDeleteClick(fine._id)} />
               
               {editingFineId !== fine._id ? (
                 <img

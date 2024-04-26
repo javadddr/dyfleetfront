@@ -9,6 +9,21 @@
 
 
 }
+.firstinfostatus{
+  width: 30%;
+  font-size: 14px;
+}
+.firstinfostatus h2{
+ font-size: 24px;
+}
+
+.secondchartinfo{
+  display: flex;
+  align-items: flex-start;
+  width: 70%;
+  font-size: 14px;
+  height: 70%;
+}
 .statusdrversendi{
   display: flex;
   flex-direction: column;
@@ -23,7 +38,7 @@
   margin: 0px;
 }
 .carsassidrivers{
-  min-height: 380px;
+  min-height: 360px;
   padding-top: 20px;
 }
 .modal-header{
@@ -33,10 +48,12 @@
 .table-dark th {
   background-color: #353535 !important;
   font-weight: 400;
+  font-size: 13px;
 }
 .carsassidrivers nav{
   display: block;
  text-align: center;
+ font-size: 13px;
 }
 .paginationddd0{
   display: flex;
@@ -65,4 +82,7 @@
 
 .navpaginationddd0{
   width: 100%;
+}
+.table-dark tr{
+  font-size: 13px;
 }

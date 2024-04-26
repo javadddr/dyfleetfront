@@ -38,9 +38,9 @@ function Compliance() {
     <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider', width: 'auto' }}>
         <Tabs value={value} onChange={handleChange} aria-label="Operations tabs" centered>
-          <Tab icon={renderIcon(ins)} label="Driving Fines" sx={{ typography: 'body1', fontWeight: '400', fontSize: '1.3rem', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', marginTop: '15px' }} />
-          <Tab icon={renderIcon(li)} label="Equipment" sx={{ typography: 'body1', fontWeight: '400', fontSize: '1.3rem', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', marginTop: '15px' }} />
-          <Tab icon={renderIcon(bil)} label="Areas" sx={{ typography: 'body1', fontWeight: '400', fontSize: '1.3rem', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', marginTop: '15px' }} />
+          <Tab icon={renderIcon(ins)} label="Driving Fines" sx={{ typography: 'body1', fontWeight: '400', fontSize: '1rem', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', marginTop: '15px' }} />
+          <Tab icon={renderIcon(li)} label="Equipment" sx={{ typography: 'body1', fontWeight: '400', fontSize: '1rem', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', marginTop: '15px' }} />
+          <Tab icon={renderIcon(bil)} label="Areas" sx={{ typography: 'body1', fontWeight: '400', fontSize: '1rem', fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif', marginTop: '15px' }} />
         </Tabs>
       </Box>
       <Box sx={{ width: '100%', mt: 3 }}>
