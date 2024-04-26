@@ -3,7 +3,7 @@ import './FleetOver.css'; // Make sure this path matches your CSS file's locatio
 import { useCars } from './CarsContext';
 import Loading from './Loading'; 
 import { useDrivers } from './DriversContext'; // Import useDrivers hook
-import {DyLine} from 'dynamochart';
+import DyLine from './DyLine';
 import {DyPie} from 'dynamochart';
 import {DyTable} from 'dynamochart';
 import {DyStackChart} from 'dynamochart';
@@ -606,7 +606,7 @@ if (loadingO) {
 
   return (
     <div className="mainfleeto">
-   
+   <div className='maindashdd'>
       <div className="kpi-container">
       <div className="kpi">
         <div className="kpi-title">Total Vehicles</div>
@@ -658,107 +658,110 @@ if (loadingO) {
           ))}
         </div>
       </div>
-     
-  {loading || data.length === 0 ? (
-    <Loading />
-  ) : (
-    
-    <DyLine
-      data={data}
-      colors={['#E15759', '#76B7B2', '#4E79A7']}
-      xAxisTitle="Date"
-      yAxisTitle="Count"
-      lineShape="curveMonotoneX"
-      chartTitle="Number of Drivers and Vehicles"
-      chartWidth={1415}
-      chartHeight={550}
-      legendTitle=""
-      lineAreaColor={true}
-      areaColorOpacity={0.3}
-      linesPadding={0.1}
-      chartTemplate="t2"
-      dataPoints={5}
-      chartBorder={true}
-    />
-  
-  )}
-
-<div className='pistatusibin'>
-  <div className='secopiformardd'>
-  {loadingCars || !statusDurationSumCars.length ? (
-      <Loading />
-    ) : (
-      <div className='secopiformarddPP'>
-  <DyPie
-          data={statusDurationSumCars}
-          colors={colors1}
-          chartWidth={660}
-          chartHeight={500}
-          chartPadding={50}  
-          padding={{top:30,left:10,right:110,bottom:80}}
-          donutRatio={50}
-          showTotal={true}
-          totalFormat="percentage"   //can be "number" or "percentage"
-          totalSize={25}
-          title="Vehicles Status"
-          showSmall={3}
-          strokeWidth="0"
-          chartTemplate="t2" //chartTemplate can be "t1" or "t2"
-        />
-        </div>
+      <div className='kpi-container'>
+        {loading || data.length === 0 ? (
+          <Loading />
+        ) : (
+          
+          <DyLine
+            data={data}
+            colors={['#E15759', '#76B7B2', '#4E79A7']}
+            xAxisTitle="Date"
+            yAxisTitle="Count"
+            lineShape="curveMonotoneX"
+            chartTitle="Number of Drivers and Vehicles"
+            chartWidth={1115}
+            chartHeight={450}
+            legendTitle=""
+            lineAreaColor={true}
+            areaColorOpacity={0.3}
+            linesPadding={0.1}
+            chartTemplate="t2"
+            dataPoints={5}
+            chartBorder={true}
+          />
+        
         )}
-        </div>
-  
-  <div className='secopiformar'>
-  {loadingDrivers || !statusDurationSum.length ? (
-      <Loading />
-    ) : (
-      <div className='secopiformarddPP'>
-  <DyPie
-          data={statusDurationSum}
-          colors={colors1}
-          chartWidth={660}
-          chartHeight={500}
-          chartPadding={50}  
-          padding={{top:30,left:10,right:110,bottom:80}}
-          donutRatio={50}
-          showTotal={true}
-          totalFormat="percentage"   //can be "number" or "percentage"
-          totalSize={25}
-          title="Drivers Status"
-          showSmall={3}
-          strokeWidth="0"
-          chartTemplate="t2" //chartTemplate can be "t1" or "t2"
-        />
+      </div>
+      <div className='kpi-container'>
+        <div className='pistatusibin'>
+          <div className='secopiformardd'>
+    {loadingCars || !statusDurationSumCars.length ? (
+        <Loading />
+      ) : (
+        <div className='secopiformarddPP'>
+    <DyPie
+            data={statusDurationSumCars}
+            colors={colors1}
+            chartWidth={525}
+            chartHeight={500}
+            chartPadding={50}  
+            padding={{top:30,left:10,right:110,bottom:80}}
+            donutRatio={50}
+            showTotal={true}
+            totalFormat="percentage"   //can be "number" or "percentage"
+            totalSize={25}
+            title="Vehicles Status"
+            showSmall={3}
+            strokeWidth="0"
+            chartTemplate="t2" //chartTemplate can be "t1" or "t2"
+          />
+          </div>
+          )}
+          </div>
+          <div className='secopiformar'>
+    {loadingDrivers || !statusDurationSum.length ? (
+        <Loading />
+      ) : (
+        <div className='secopiformarddPP'>
+    <DyPie
+            data={statusDurationSum}
+            colors={colors1}
+            chartWidth={525}
+            chartHeight={500}
+            chartPadding={50}  
+            padding={{top:30,left:10,right:110,bottom:80}}
+            donutRatio={50}
+            showTotal={true}
+            totalFormat="percentage"   //can be "number" or "percentage"
+            totalSize={25}
+            title="Drivers Status"
+            showSmall={3}
+            strokeWidth="0"
+            chartTemplate="t2" //chartTemplate can be "t1" or "t2"
+          />
+          </div>
+          )}
+          </div>
          </div>
-        )}
-        </div>
-</div>
-{loading || statusDuringTimeForCars.length === 0 ? (
-    <Loading />
-  ) : (
-    
-    <DyLine
-      data={statusDuringTimeForCars}
-      colors={colors}
-      xAxisTitle="Date"
-      yAxisTitle="Percentage"
-      lineShape="curveMonotoneX"
-      chartTitle="State of the Fleet vs. Date"
-      chartWidth={1415}
-      chartHeight={550}
-      legendTitle=""
-      lineAreaColor={true}
-      areaColorOpacity={0.3}
-      linesPadding={0.1}
-      chartTemplate="t2"
-      dataPoints={5}
-      chartBorder={true}
-    />
-  
-  )}
-
-{loading || statusDuringTimeForDrivers.length === 0 ? (
+      </div>
+       <div className='kpi-container'>
+       {loading || statusDuringTimeForCars.length === 0 ? (
+          <Loading />
+            ) : (
+              
+              <DyLine
+                data={statusDuringTimeForCars}
+                colors={colors}
+                xAxisTitle="Date"
+                yAxisTitle="Percentage"
+                lineShape="curveMonotoneX"
+                chartTitle="State of the Fleet vs. Date"
+                chartWidth={1115}
+                chartHeight={450}
+                legendTitle=""
+                lineAreaColor={true}
+                areaColorOpacity={0.3}
+                linesPadding={0.1}
+                chartTemplate="t2"
+                dataPoints={5}
+                chartBorder={true}
+              />
+            
+            )}
+       </div>
+        <div className='kpi-container'>
+        {loading || statusDuringTimeForDrivers.length === 0 ? (
     <Loading />
   ) : (
     
@@ -769,8 +772,8 @@ if (loadingO) {
       yAxisTitle="Percentage"
       lineShape="curveMonotoneX"
       chartTitle="State of the Drivers vs. Date"
-      chartWidth={1415}
-      chartHeight={550}
+      chartWidth={1115}
+      chartHeight={450}
       legendTitle=""
       lineAreaColor={true}
       areaColorOpacity={0.3}
@@ -781,6 +784,8 @@ if (loadingO) {
     />
   
   )}
+        </div>
+
 
   <div className='tableqbiappols'>
     
@@ -849,7 +854,7 @@ if (loadingO) {
         
         </div>
        
-        <div className='areasofdv'>
+        <div className='kpi-container'>
   {loading || areasPerformance.length === 0 ? (
    ""
   ) : (
@@ -859,8 +864,8 @@ if (loadingO) {
         sort = 'n' //az , za,n
         chartPadding = {{ top: 0, right:0, bottom: 20, left: 0 }}
         chartMargin = {{ top: 0, right: 0, bottom: 0, left: 0 }}
-        chartWidth = {1194}
-        chartHeight = {300}
+        chartWidth = {900}
+        chartHeight = {250}
         gap = {20} // Gap between bars
         xAxis = 'label'   //this is coming from your data 
         xAxisTitle='Areas'
@@ -874,6 +879,7 @@ if (loadingO) {
         />
         )}
         </div>
+    </div>
     </div>
   );
 }
