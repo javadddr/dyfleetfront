@@ -13,8 +13,8 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 125vw;
-  height: 125vh;
+  width: 100vw;
+  height: 100vh;
   background-image: url('./bc1.jpg'); /* Adjust with the correct path */
   background-size: cover;
   background-position: 100% 10%; /* Manual positioning */
@@ -38,15 +38,16 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 2rem;
+  padding: 10px;
   border-radius: 12px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  width: 450px;
+  width: 350px;
   max-width: 100%;
-  height: 700px; /* Ensures it doesn't overflow the viewport */
+  height: 550px; /* Ensures it doesn't overflow the viewport */
   background-color: rgba(252, 251, 250, 0.15); /* Slightly transparent to see the blur effect */
   z-index: 1;
   border: 1px solid black;
+  font-size: 13px;
 
 }
 
@@ -92,9 +93,9 @@ html, body {
 }
 
 .register-form h2 {
-  margin-bottom: 5.5rem;
+  margin-bottom: 70px;
   color: #120ee5;
-  font-size:2.5rem ;
+  font-size:28px ;
   text-align: center;
   font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -102,20 +103,21 @@ html, body {
 .register-form label {
   display: block;
   margin-bottom: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 15px;
+  margin-left: 12%;
   opacity: 0.9;
   font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .register-form input {
-  width: 100%;
-  padding: 0.75rem;
+  width: 80%;
+  padding: 0.45rem;
   margin-bottom: 1rem;
   background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid black;
   border-radius: 8px;
   color: #040404;
-  font-size: 1.1rem;
+  font-size: 15px;
 
 }
 
@@ -154,7 +156,7 @@ html, body {
   text-decoration: underline;
 }
 .form-footer{
-  margin-top: 60px;
+  margin-top: 20px;
 }
 .register-form button:disabled {
   background-color: #ccc; 

@@ -2,8 +2,8 @@
   position: fixed; 
   top: 0;
   left: 0;
-  width: 125vw;
-  height: 125vh;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(10, 25, 47, 0.85);
   backdrop-filter: blur(2px); 
   display: flex;

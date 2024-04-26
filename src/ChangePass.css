@@ -9,8 +9,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 125vw;
-  height: 125vh;
+  width: 100vw;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
@@ -61,7 +61,7 @@
 .titlechange{
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 22px;
   margin-bottom: 5.5rem;
   color: #120ee5;
  
@@ -87,7 +87,7 @@ font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-seri
     text-decoration: underline;
   }
 .forgotpassdd{
-  margin-top: 250px;
+  margin-top: 160px;
 }
 .forgotpassddo span{
   color: #120ee5;
