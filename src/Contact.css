@@ -52,7 +52,7 @@ text-align: center;
   border-bottom-right-radius: 0;
   margin-bottom: 0;
   border-right: none;
-  font-size: 19px;
+  font-size: 14px;
 }
 .sewomi{
   flex: 1;
@@ -88,13 +88,14 @@ height: 80vh;
 }
 .thead p{
 color: black;
-font-size: 22px;
+font-size: 17px;
 font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  }
 .Address,
 .Talk,
 .contact{
   margin-bottom: 30px;
+ 
 }
 
 .form-group {
@@ -152,7 +153,7 @@ font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 .input11,
 .input12{
   display: flex;
-  border: 1px solid #656464;
+  border: 1px solid #000000;
   width: 50%;
   height: 50px;
   padding-left: 10px;
@@ -214,9 +215,9 @@ font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
   border-radius: 4px;
   cursor: pointer;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-font-size: 18px;
-  width: 300px;
-  height: 50px;
+font-size: 15px;
+  width: 220px;
+  height: 40px;
   
 }
 .sent:hover {
@@ -269,7 +270,7 @@ button:disabled {
     width: 100%;
     display: block;
     
-    font-size: 30px;
+    font-size: 25px;
     color: #333;
    font-family:'Roboto', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;

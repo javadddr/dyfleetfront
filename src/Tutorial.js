@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Tutorial() {
-  return <div>Hello Tutorial</div>;
+  return <div>It will come soon...</div>;
 }
 
 export default Tutorial;

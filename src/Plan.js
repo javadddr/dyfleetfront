@@ -82,7 +82,8 @@ const Plan = () => {
             width: '100%',
             borderCollapse: 'collapse',
             marginTop: '20px',
-            boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'
+            boxShadow: 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px',
+            fontSize:"13px"
           }}>
           <thead>
             <tr>
