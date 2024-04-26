@@ -13,8 +13,8 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  height: 100vh;
+  width: 125vw;
+  height: 125vh;
   background-image: url('./bc1.jpg'); /* Adjust with the correct path */
   background-size: cover;
   background-position: 100% 10%; /* Manual positioning */
@@ -74,7 +74,7 @@ html, body {
   max-width: 30%;
 
   z-index: 500;
-  height: 100vh;
+  height: 125vh;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
