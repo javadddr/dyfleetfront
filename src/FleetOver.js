@@ -4,8 +4,8 @@ import { useCars } from './CarsContext';
 import Loading from './Loading'; 
 import { useDrivers } from './DriversContext'; // Import useDrivers hook
 import DyLine from './DyLine';
-import {DyPie} from 'dynamochart';
-import {DyTable} from 'dynamochart';
+import DyPie from './DyPie';
+import DyTable from './DyTable';
 import {DyStackChart} from 'dynamochart';
 import {DyBar} from 'dynamochart';
 import PlaceHolderView from './PlaceHolderView'
@@ -695,13 +695,13 @@ if (loadingO) {
             colors={colors1}
             chartWidth={525}
             chartHeight={500}
-            chartPadding={50}  
-            padding={{top:30,left:10,right:110,bottom:80}}
+            chartPadding={60}  
+            padding={{top:30,left:100,right:60,bottom:80}}
             donutRatio={50}
             showTotal={true}
             totalFormat="percentage"   //can be "number" or "percentage"
-            totalSize={25}
-            title="Vehicles Status"
+            totalSize={15}
+            title="Drivers Status"
             showSmall={3}
             strokeWidth="0"
             chartTemplate="t2" //chartTemplate can be "t1" or "t2"
@@ -719,12 +719,12 @@ if (loadingO) {
             colors={colors1}
             chartWidth={525}
             chartHeight={500}
-            chartPadding={50}  
-            padding={{top:30,left:10,right:110,bottom:80}}
+            chartPadding={60}  
+            padding={{top:30,left:100,right:60,bottom:80}}
             donutRatio={50}
             showTotal={true}
             totalFormat="percentage"   //can be "number" or "percentage"
-            totalSize={25}
+            totalSize={15}
             title="Drivers Status"
             showSmall={3}
             strokeWidth="0"
@@ -756,6 +756,7 @@ if (loadingO) {
                 chartTemplate="t2"
                 dataPoints={5}
                 chartBorder={true}
+            
               />
             
             )}
@@ -781,15 +782,13 @@ if (loadingO) {
       chartTemplate="t2"
       dataPoints={5}
       chartBorder={true}
+      donutRatio={50}
     />
   
   )}
         </div>
 
-
-  <div className='tableqbiappols'>
-    
-    <div className='tableqbiappols1'>
+        <div className='DDSCDD'>
   {loading || rows.length === 0 ? (
     <Loading />
   ) : (
@@ -798,13 +797,16 @@ if (loadingO) {
         colors={colorsta}
         columns={columns}
         pagesSize={10}
-        chartMaxWidth={1200}
+        chartMaxWidth={1900}
         showSearch={true}
         tableTemplate="t2" 
         />
         )}
         </div>
-        <div className='tableqbiappols2'>
+
+    
+   
+        <div id='DDSCDD1'>
         {loading || fines.length === 0 ? (
     ""
   ) : (
@@ -814,7 +816,7 @@ if (loadingO) {
           yAxis="cost"   //If your data has a different name, you can enter it here. The date, which we want to display on the y-axis in this case, is called “Age”.
           showValues={true}  // Ensure that showValues is set to true
           valueDisplayPosition="middle" //can be "bottom","middle","top"
-          valueFontSize='15px'
+          valueFontSize='13px'
           valueFontFamily='inter'
           showXLabels={true} // Set to true to show x-axis labels or false to hide
           showYLabels={true} // Set to true to show y-axis labels or false to hide
@@ -825,8 +827,8 @@ if (loadingO) {
           yAxisLabel="cost"
           xAxisLabelFont="inter"
           yAxisLabelFont="inter"
-          xAxisLabelFontSize="16px"
-          yAxisLabelFontSize="16px"
+          xAxisLabelFontSize="13px"
+          yAxisLabelFontSize="13px"
           xAxisLabelRotate="-45" // 'horizontal', 'vertical', or 45
           yAxisLabelRotate="0" // 'horizontal', 'vertical', or 45
           xAxisLine={true}
@@ -838,8 +840,8 @@ if (loadingO) {
           barBorderRadius={2} // Adjust the border radius for the bars
           barBorderColor="black" // Adjust the border color for the bars
           showTooltip = {true}
-          cWidth = {676}
-          cHeight = {520}
+          cWidth = {1176}
+          cHeight = {450}
           chartPadding={{ top: 110, right: 80, bottom: 140, left: 110 }}
           template='t2'
           chartBoxShadow={false}
@@ -852,7 +854,7 @@ if (loadingO) {
         )}
         </div>
         
-        </div>
+      
        
         <div className='kpi-container'>
   {loading || areasPerformance.length === 0 ? (

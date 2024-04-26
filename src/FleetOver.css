@@ -152,11 +152,26 @@ font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif, "Apple Color Em
   margin-top: 0.32%;
  
 }
+.DDSCDD{
+  display: flex;
+  justify-content: center;
+  width: 86.4%;
+  margin-left: 7%;
+
+
+}
+#DDSCDD1{
+  display: flex;
+  justify-content: center;
+  width: 87.2%;
+  margin-left: 6.4%;
+}
 .tableqbiappols1 {
   flex: 1.3;  
   width: 50%; 
   margin-left: -9.3%;
   min-width: 500px;
+  font-size: 14PX;
 }
 .tableqbiappols2{
   flex: 1;  

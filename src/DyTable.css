@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Roboto:wght@400&display=swap');
+
+.dy-table {
+  width: 100%;
+  font-family: 'Roboto', sans-serif; 
+  border-collapse: collapse;
+  font-family: 'Roboto', sans-serif;
+  
+  color: #E0E0E0; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+ 
+}
+
+
+
+.dy-table th,
+.dy-table td {
+  padding: 14px 24px;
+  text-align: left;
+  border-bottom: 1px solid #E0E0E0;
+  font-size: 14px;
+}
+
+.dy-table th {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.dy-table tbody tr:hover {
+  background-color: rgba(166, 43, 43, 0.8);
+}
+
+
+
+
+.search-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+margin-bottom: 10px;
+  align-items: center;
+
+
+}
+
+.search-section input {
+  padding: 8px;
+  border: 1px solid #070606;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.search-section select {
+  padding: 8px;
+  border: 1px solid #070606;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+
+
+.search-section button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Design for Search Section */
+@media screen and (max-width: 768px) {
+  .search-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-section button {
+    flex-direction: column;
+    align-items: stretch;
+    width: 160px;
+  }
+}
+.sortable-header {
+  cursor: pointer;
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px;
+  font-family: 'Roboto', sans-serif; /* Use Roboto for the body */
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+  color: #1F1F1F;
+}
+
+.pagination button {
+  background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  color: #1976d2;
+  font-size: inherit;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #e3f2fd;
+}
+
+.pagination button[disabled] {
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.pagination .page-info {
+  margin: 0 15px;
+}
+
+.pagination select {
+  border: 1px solid #1976d2;
+  border-radius: 4px;
+  padding: 5px 10px;
+  background-color: #fff;
+  color: #1976d2;
+  cursor: pointer;
+}
+
+.pagination select:hover {
+  background-color: #e3f2fd;
+}
+
+
+@media screen and (max-width: 768px) {
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pagination .page-info {
+    margin-bottom: 10px;
+  }
+}
+.paginationmain{
+  display: flex;
+}
+
+
+.export-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: auto; /* Aligns the button to the right */
+ 
+}
+
+.export-button:hover {
+  background-color: #45a049;
+}
+
+
+.table-row .expandable-contentpowsa {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 30s ease-out;
+  background-color: #f5f5f5; /* Adjust as needed */
+}
+.expandable-contentpowsa {
+  display: none;
+  background-color: #f5f5f5; /* Adjust as needed */
+}
+.table-row.expanded + .expandable-contentpowsa {
+  display: table-row;
+}
+.table-row :hover{
+  background-color: #1F1F1F;
+}
