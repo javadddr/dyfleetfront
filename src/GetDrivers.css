@@ -31,11 +31,11 @@ button.active {
 }
 .filasmargin{
   display: flex;
- 
+  font-size: 14px;
 }
 .geeraliindiv1{
   display: flex;
-
+  font-size: 14px;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
@@ -56,11 +56,13 @@ button.active {
   white-space: nowrap; /* Prevent wrapping onto a new line */
   text-overflow: ellipsis; /* Use ellipsis for overflow */
 width: 160%;
+font-size: 14px;
 
 }
 .ddddssx{
 display: flex;
 justify-content: flex-start;
+font-size: 12px;
 }
 .geeraliindiv2{
   display: flex;
@@ -71,17 +73,19 @@ justify-content: flex-start;
   margin-left: 0%;
   color: brown;
   font-weight: 500;
+  font-size: 14px;
   display: flex;
   overflow: hidden; /* Hide overflow */
   white-space: nowrap; /* Prevent wrapping onto a new line */
   text-overflow: ellipsis; /* Use ellipsis for overflow */
-width: 200px;
+width: 100px;
 
 }
 .ddddssx span{
 
   color: rgb(51, 154, 239);
   font-weight: 500;
+  font-size: 12px;
   display: flex;
   overflow: hidden; /* Hide overflow */
   white-space: nowrap; /* Prevent wrapping onto a new line */
@@ -99,14 +103,16 @@ margin-right:10px;
 
 
 .driver-card {
-  padding: 10px;
+  padding: 5px;
   margin: 5px 0;
   background-color: white;
  padding-left: 10px;
   border-radius: 5px;
   cursor: grab;
-  min-height: 120px;
-  max-height: 120px;
+  min-height: 100px;
+  max-height: 100px;
+  min-width: 330px;
+  max-width:  330px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -123,17 +129,19 @@ margin-right:10px;
   font-weight: 500;
   margin-right: 3px;
   margin-left: 3px;
+  font-size: 14px;
 }
 .filasmargin span{
   color: #004085;
   font-weight: 500;
   margin-right: 3px;
+  font-size: 14px;
   margin-left: 3px;
 }
 
 .driver-card img {
-  width: 90px; /* Adjust based on your preference */
-  height: 90px;
+  width: 80px; /* Adjust based on your preference */
+  height: 80px;
   border-radius: 50%; /* Circular images for drivers */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
@@ -142,6 +150,8 @@ margin-right:10px;
 .didiv{
 display: flex;
 justify-content: space-between;
+min-width: 320px;
+max-width:  320px;
 }
 .picture-containerooppp img{
   border-radius: 50%; /* Circular images for drivers */

@@ -76,15 +76,15 @@ padding: 0px;
     text-align: center;
     align-items: center;
     cursor: pointer;
-    padding: 10px 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 230px;
+    padding: 6px 2px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 180px;
     background-color: #0843bf;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1.1rem;
+    font-size: 14px;
  
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

@@ -39,7 +39,7 @@
   align-items: center;
   text-align: center;
   margin: 0px;
-  font-size: 1.1rem;
+  font-size: 14px;
   font-family:'inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -73,7 +73,7 @@
   border: 1px solid black;
 }
 .car-card {
-  padding: 10px;
+  padding: 8px;
   background-color: #fff;
   margin-bottom: 3px;
   cursor: grab;
@@ -109,7 +109,7 @@ padding-bottom: 10px;
 
 .status-filter {
   background-color: #cecece;
-  height: 45px;
+  height: 35px;
   border-radius: 3px;
   box-sizing: border-box;
   color: #000000;
@@ -137,14 +137,14 @@ padding-bottom: 10px;
 
 .status-filter.active{
   background-color:#6976b7;
-height: 45px;
+  height: 35px;
   border-radius: 3px;
   box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-family:'inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 300;
   line-height: 20px;
   margin: 0;
@@ -183,9 +183,9 @@ width: 99.6%;
 }
 
 .search-input {
-  padding: 8px;
+  padding: 4px;
   width: 90%;
- 
+ font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -197,7 +197,7 @@ width: 99.6%;
 
 .generaloinof span{
 
-  font-size: 1.1rem;
+  font-size: 14px;
   color: #493df0;
   margin-left: 10px;
 
@@ -238,6 +238,7 @@ text-align: center;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
+  font-size: 14px;
 }
 .generalandmore{
   display: flex;
@@ -248,7 +249,7 @@ text-align: center;
   cursor: pointer;
 }
 .titleliandfonti {
-  font-size: 0.9rem;
+  font-size: 14px;
   display: flex;
   width: 100%; /* or a specific width, ensure it's constrained */
   overflow: hidden; /* Hide overflow */
@@ -262,7 +263,7 @@ text-align: center;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: 0.9rem;
+  font-size: 14px;
 }
 
 
@@ -291,7 +292,9 @@ text-align: center;
   border: 2px solid white; /* Makes the indicator stand out against the picture */
 }
 
-
+.morecarinfosis p{
+  font-size: 13px;
+}
 
 .status-indicatorqw.active {
   background-color: #4CAF50;

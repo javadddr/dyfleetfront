@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
 .tasks-notes-container {
   display: flex;
   justify-content: space-between;
@@ -58,7 +59,7 @@ height: 40px;
 .noteinfo button{
   background-color: antiquewhite;
     color: black;
-    font-size: 0.9rem;
+    font-size: 14px;
     padding: 5px;
     height: 30px;
     width: 50px;
@@ -66,7 +67,7 @@ height: 40px;
 .taskdisanddate button{
   background-color: antiquewhite;
     color: black;
-    font-size: 0.9rem;
+    font-size: 14px;
     padding: 5px;
     height: 30px;
     width: 50px;
@@ -279,7 +280,7 @@ color: rgb(182, 33, 27);
   font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .editiforselfortas select{
-  font-size: 1rem;
+  font-size: 14px;
   height: 63.5%;
   width: 150px;
   margin-left: 5px;
@@ -336,10 +337,12 @@ color: rgb(182, 33, 27);
   display: flex;
   justify-content: center;
   text-align: center;
+  font-size: 13px;
   
 }
 .divfordando input{
   height: 64%;
+  font-size: 13px;
 }
 .taskdisand{
   display: flex;
@@ -355,11 +358,12 @@ color: rgb(182, 33, 27);
   height: 40px;
 }
 .taskdisanddate p{
-  font-size: 0.8rem;
+  font-size: 14px;
   margin-bottom: 0px;
 }
 .taskdisanddis p{
   margin: 0px;
+  font-size: 14px;
 }
 .note-edit-form{
   width: 100%;

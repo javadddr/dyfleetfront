@@ -213,7 +213,7 @@ const driverMatchesSearchQuery = (driver) => {
           onDrop={(e) => { handleDrop(e, status); handleDragLeaveOrDrop(); }}
           onDragOver={(e) => handleDragOver(e, status)}
           onDragLeave={handleDragLeaveOrDrop}
-          style={{ height: activeStatuses.length<5 ? '900px' : '600px' }}
+          style={{ height: activeStatuses.length<5 ? '900px' : '500px' }}
         >
         <div className="car-cards-container">
         {drivers.filter(driver => driver.status === status && driverMatchesSearchQuery(driver))
