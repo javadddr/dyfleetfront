@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  font-size: 12px;
+  font-size: 16px;
 
 }
 .top-section{
@@ -78,7 +78,7 @@ body {
   text-align: left;
   cursor: pointer;
   transition: color 0.3s, padding-left 0.3s;
-  font-size: 1.2rem; /* Larger font size for readability */
+  font-size: 22px; /* Larger font size for readability */
   border-bottom: 1px solid #dee2e6; 
   padding-left: 10px; /* Indent text to align with content */
   font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -254,7 +254,7 @@ font-size: 1rem;
   margin-top: 50px;
   
 }
-.sidebotti  img{
+.sidebotti img{
  opacity: 0.5;
   
 }
