@@ -498,7 +498,7 @@ const deleteEquipment = async (id, type) => {
         />
       </Box>
     </div>
-  <div className='typdatefine1o' style={{ width: '100%' }}>
+  <div className='typdatefine1o' style={{ width: '80%' }}>
     <Stack direction="row" spacing={2} justifyContent="flex-end">
       <Button variant="contained" endIcon={<SendIcon />} type="submit">
         Submit

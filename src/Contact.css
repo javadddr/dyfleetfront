@@ -232,9 +232,9 @@ button:disabled {
 .popup {
   position: fixed;
   top: 25%;
-  left: 25%;
-  width: 50%;
-  height: 50%;
+  left: 30%;
+  width: 40%;
+  height: 40%;
   background-color: rgba(250, 212, 212, 0.5);
   display: flex;
   align-items: center;
@@ -244,7 +244,7 @@ button:disabled {
 }
 
 .popup-content {
-  background-color: #bbeef8;
+  background-color: #F6EFE8;
   padding: 20px;
   border-radius: 20px;
   width: 80%;
@@ -376,7 +376,7 @@ button:disabled {
   align-items: center;
 }
 .senti{
-  width: 20%;
+  width: 10%;
 }
 #textsent{
   color: black;

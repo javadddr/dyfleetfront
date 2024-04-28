@@ -10,6 +10,7 @@ font-size: 11px;
   display: flex;
   flex-direction: column;
   height: 200px;
+  width: 500px;
 }
 .typdatefine{
   margin-left: 20px;
@@ -35,11 +36,12 @@ font-size: 12px;
   margin-left: 20px;
   margin-right: 20px;
   display: flex;
-
+width: 80%;
   justify-content: space-between;
   align-items: center;
   text-align: center;
 }
+
 .isufin{
   margin-right: 10px;
   font-size: 11px;
@@ -104,6 +106,7 @@ font-size: 12px;
   display: flex;
   margin-bottom: 20px;
   justify-content: flex-end;
+  font-size: 13px;
 }
 .mainexarjo{
   width: 100%;
@@ -146,7 +149,7 @@ font-size: 12px;
   border-radius: 5px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   z-index: 1050;
-  height: 800px;
+  height: 750px;
 }
 /* Add styling for animation */
 .modal-enter {

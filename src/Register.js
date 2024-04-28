@@ -93,10 +93,10 @@ function Register() {
             variant="filled"
             severity={alertType}
             sx={{
-              fontSize: '1.25rem', // Sets the font size to 20px
+              fontSize: '16px', // Sets the font size to 20px
               borderRadius: '10px', // You can keep other styles here as well
               '& .MuiAlert-message': { // Targeting the internal message class for additional specific styles
-                fontSize: '1.25rem' // Ensures that text inside the alert also gets the same font size
+                fontSize: '16px' // Ensures that text inside the alert also gets the same font size
               }
             }}
           >

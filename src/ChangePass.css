@@ -27,12 +27,15 @@
   height: 400px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .popup-content button {
   margin-top: 20px;
   display: block;
-  width: 100%;
+  width: 50%;
   padding: 10px;
   border: none;
   background-color: #007bff;
@@ -41,6 +44,7 @@
   font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.1rem;
   border-radius: 5px;
+  
 }
 .login-container a {
   color: #100f0f;
@@ -76,8 +80,21 @@
   display: flex;
   justify-content: center;
 }
+.gif img{
+  width: 20px;
+}
 .messageandemail{
+  display: flex;
+  flex-direction: column;
+ 
+  align-items: center;
 font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.messageandemail button{
+  width: 100px;
+  height: 40px;
+  padding: 0px;
+  font-size: 15px;
 }
 .forgotpassdd span{
   color: #120ee5;

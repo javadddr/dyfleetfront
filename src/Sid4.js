@@ -538,6 +538,7 @@ const [tempDescription, setTempDescription] = useState("");
     value={form.driverName || ''}
     onChange={handleChange}
     style={{ width: '250px', height: '35px', margin: '8px' }}
+    required
   >
     <option value="">Select Driver</option>
     {driverOptions.map((option) => (
@@ -556,6 +557,7 @@ const [tempDescription, setTempDescription] = useState("");
     value={form.carName || ''}
     onChange={handleChange}
     style={{ width: '250px', height: '35px', margin: '8px' }}
+    required
   >
     <option value="">Select Vehicle</option>
     {carOptions.map((option) => (
@@ -573,6 +575,7 @@ const [tempDescription, setTempDescription] = useState("");
     value={form.status || ''}
     onChange={handleChange}
     style={{ width: '250px', height: '35px', margin: '8px' }}
+    required
   >
     <option value="">Select Status</option>
     {fineStatuses.map((status) => (
@@ -611,7 +614,7 @@ const [tempDescription, setTempDescription] = useState("");
 
         </div>
     
-        <div className='typdatefine1o' style={{width: '100%',marginTop:'15px'}}>
+        <div className='typdatefine1o' style={{width: '93%',marginTop:'15px'}}>
           
         <FileUploadContainer {...getRootProps()} isDragActive={isDragActive}>
         <input
@@ -700,9 +703,10 @@ const [tempDescription, setTempDescription] = useState("");
             type="text"
             value={tempDescription}
             onChange={(e) => setTempDescription(e.target.value)}
-            style={{ width: '100%',height:"30px" }}
+            style={{ width: '100%',height:"20px",fontSize: '12px',padding:'0px' }}
             className="form-control"
             required
+        
           />
           ) : (
             fine.description
@@ -719,6 +723,7 @@ const [tempDescription, setTempDescription] = useState("");
      value={tempFor}
      onChange={(e) => setTempFor(e.target.value)}
      required
+     style={{ fontSize: '12px',padding:'0px' }}
    >
      <option value="">Select Issued For</option>
      {fineForOptions.map((option) => (
@@ -746,6 +751,7 @@ const [tempDescription, setTempDescription] = useState("");
      onChange={(event) => {
        setTempStatus(event.target.value);
      }}
+     style={{ fontSize: '12px',padding:'0px' }}
      required
    >
      <option value="">Select Status</option>

@@ -35,7 +35,7 @@ function ChangePass() {
   <div className="popup">
     <div className="popup-content">
       <div className="gif">
-      <img src={dodo} alt="Loading" style={{ width: '270px' }} />
+      <img src={dodo} alt="Loading" style={{ width: '150px' }} />
 
       </div>
       <div className="messageandemail">
