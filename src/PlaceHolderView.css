@@ -17,10 +17,10 @@ width: 35%;
 }
 
 .titledahsss{
-  margin-top: 40%;
+  margin-top: 30%;
   margin-left:10% ;
   margin-bottom: 30px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   width: 67%;
   font-family:'Raleway','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 600;
@@ -43,9 +43,11 @@ width: 35%;
   color: rgb(0, 0, 0);
   border: 1px solid rgb(185, 184, 184);
  }
-
+ .placflowbuactive button{
+padding: 5px 10px;
+ }
  .mainofplacholdring{
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(227, 232, 227);
  }
 
  .glow {

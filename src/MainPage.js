@@ -159,7 +159,8 @@ const toggleSettingsInfo = () => {
   const toggleUserInfo = () => {
     setShowUserInfo(!showUserInfo);
   };
-
+const chekio=userInfo.capacity===0&& userInfo.createdAtDays<14
+console.log(chekio)
   // Click outside handler
   useEffect(() => {
     function handleClickOutside(event) {
@@ -243,7 +244,7 @@ const toggleSettingsInfo = () => {
         </div>
         </div>
        { userInfo.capacity===0&& userInfo.createdAtDays<14&& <div className="cardtrial" onClick={handleSubscribeClick}>
-       <div> You are using the trial version, with<h1>{13-userInfo.createdAtDays} days remaining.</h1>Click here to subscribe.</div>
+       <div> You are using the trial version, <h1>with {13-userInfo.createdAtDays} days remaining.</h1>Click here to subscribe.</div>
         </div>}
         <div className="bottom-icons">
 
@@ -261,11 +262,13 @@ const toggleSettingsInfo = () => {
               <img src={s} alt="Settings Logo" style={{ width: '10%', height: 'auto' }} />
               Settings
             </div>}
+          { !chekio&& <div>
            { userRoles === 'admin'&&<div className='capacityinfomain' onClick={handleSubscribeClick}>
             <div id='capacityinfomain1'>Your capacity: {cars.length}/{capacity} Vehicles</div>
             <div id='capacityinfomain1'>Your capacity: {drivers.length}/{capacity*3} Drivers</div>
             <div id='capacityinfomain2'>Purchase additional capacity here.</div>
         
+            </div>}
             </div>}
         </div>
         <div ref={userInfoRef} className={`user-info ${showUserInfo ? 'active' : ''}`}>

@@ -261,22 +261,26 @@ li:last-child {
   display: flex;
   font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   justify-content: space-between;
-  margin-top: 5px;
+  align-items: center;
+  margin-top: 0px;
   height: 40px;
   text-align: center;
 color: rgb(182, 33, 27);
+
   
 }
 .resoftaskop input{
+  font-size: 13px;
   font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .resoftaskop select{
-  font-size: 1rem;
-  height: 63.5%;
-  width: 150px;
+  font-size: 13px;
+  height: 50.5%;
+  width: 110px;
   margin-left: 5px;
 }
 .editiforselfortas input{
+  
   font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .editiforselfortas select{
@@ -314,24 +318,32 @@ color: rgb(182, 33, 27);
   height: 40px;
 }
 .editnotetaski button{
-  height: 30px;
-  font-size: 0.9rem;
+  height: 27px;
+  font-size:11px;
   background-color: rgb(133, 252, 133);
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
 }
 .resoftaskop button{
-  height: 30px;
-  font-size: 0.9rem;
+  height: 27px;
+  font-size:11px;
   background-color: rgb(133, 252, 133);
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
 }
 .divfordando{
   display: flex;
@@ -341,7 +353,7 @@ color: rgb(182, 33, 27);
   
 }
 .divfordando input{
-  height: 64%;
+  height: 50%;
   font-size: 13px;
 }
 .taskdisand{

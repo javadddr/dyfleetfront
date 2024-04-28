@@ -32,6 +32,29 @@
   margin-top: 20px;
   font-family:'Inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+#closeccdo{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 7px 5px;
+  padding-left: 2px;
+  padding-right: 2px;
+  
+  background-color: #0843bf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+
+  float: right;
+  font-size: 14px;
+  cursor: pointer;
+
+  width: 130px;
+
+  font-family:'Inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 .modalcarso {
   position: fixed;
@@ -59,10 +82,11 @@
 
 #close {
   float: right;
-  font-size: 1.1rem;
+  font-size: 14px;
   cursor: pointer;
   background: rgb(251, 199, 199);
   color: black;
+  width: 120px;
 }
 
 
@@ -169,8 +193,8 @@
 
 .Addvehicle {
   display: flex;
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: 22px;
   margin-bottom: 7px;
   padding-left: 10px;
   padding-top: 20px;
@@ -211,7 +235,7 @@
 .form-group-state select {
   display: block;
   width: 100%; /* Responsive width */
-  padding: 5px 7px; /* Adequate padding for touch targets and aesthetics */
+  padding: 4px 6px; /* Adequate padding for touch targets and aesthetics */
 
   border: 1px solid #ccc; /* Subtle border */
   border-radius: 3px; /* Rounded corners for a modern look */
@@ -220,7 +244,7 @@
   -webkit-appearance: none; /* Specific prefix for Safari */
   cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
   position: relative; /* For custom arrow positioning */
-  font-size: 1.1rem;
+  font-size: 14px;
   font-family:'Inter' ,'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 

@@ -285,29 +285,33 @@ setIsCropperVisible(false);
                 />
               </div>
              
-<LocalizationProvider dateAdapter={AdapterDateFns}>
-  <div className="form-group-state">
-  <label>Start Date</label>
-    <DatePicker
-      
-      value={driverData.startDate}
-      onChange={(newStartDate) => handleStartDateChange(newStartDate)}
-      renderInput={(params) => <TextField {...params} />}
-      required
-    />
-  </div>
 
-  <div className="form-group-state">
+<div className="form-group-state">
+  <label>Start Date</label>
+  <input 
+    type="date"
+    name="startDate"
+    value={driverData.startDate.toISOString().split('T')[0]} // Format date as yyyy-MM-dd
+    onChange={(e) => handleStartDateChange(new Date(e.target.value))} // Create new Date from input
+    required
+    style={{fontSize:"13px",height:"38px",border:"2px solid #E5E7EB",borderRadius: "5px",padding: "5px 7px"}}
+  />
+</div>
+
+
+<div className="form-group-state">
   <label>End Date</label>
-    <DatePicker
-     
-      value={driverData.endDate}
-      minDate={new Date(driverData.startDate)}
-      onChange={(newEndDate) => handleEndDateChange(newEndDate)}
-      renderInput={(params) => <TextField {...params} />}
-    />
-  </div>
-</LocalizationProvider>
+  <input 
+    type="date"
+    name="endDate"
+    value={driverData.endDate.toISOString().split('T')[0]} // Format the date to YYYY-MM-DD
+    min={driverData.startDate.toISOString().split('T')[0]} // Set minimum selectable date
+    onChange={(e) => handleEndDateChange(new Date(e.target.value))} // Create new Date from input
+    style={{fontSize:"13px", height:"38px",border:"2px solid #E5E7EB",borderRadius: "5px",padding: "5px 7px"}}
+  />
+</div>
+
+
 
   
                 <div className="form-group-state">

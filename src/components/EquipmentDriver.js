@@ -348,8 +348,8 @@ const [loading, setLoading] = useState(false);
       height: '10px',
       borderLeft:'1px solid white',
       fontFamily: 'Poppins',
-      fontSize: '16px',
-      padding: '6px 16px',
+      fontSize: '12px',
+      padding: '3px 10px',
       '&:hover': {
         backgroundColor: '#353535', // to maintain the background color on hover
       },
@@ -357,12 +357,12 @@ const [loading, setLoading] = useState(false);
   }}
 >
                 <TableRow  >
-                  <TableCell sx={{color:'white',height:'10px',fontFamily:'Poppins',fontSize:'16px',backgroundColor: '#353535'}}>Type</TableCell>
-                  <TableCell sx={{color:'white',height:'10px',fontFamily:'Poppins',fontSize:'16px',backgroundColor: '#353535'}}>Item</TableCell>
-                  <TableCell sx={{color:'white',height:'10px',fontFamily:'Poppins',fontSize:'16px',backgroundColor: '#353535'}}>Quantity</TableCell>
-                  <TableCell sx={{color:'white',height:'10px',fontFamily:'Poppins',fontSize:'16px',backgroundColor: '#353535'}}>Cost</TableCell>
-                  <TableCell sx={{color:'white',height:'10px',fontFamily:'Poppins',fontSize:'16px',backgroundColor: '#353535'}}>Delivered By</TableCell>
-                  <TableCell sx={{color:'white',height:'10px',fontFamily:'Poppins',fontSize:'16px',backgroundColor: '#353535'}}>Action</TableCell>
+                  <TableCell sx={{color:'white',height:'10px',fontFamily:'Poppins',fontSize:'12px',backgroundColor: '#353535'}}>Type</TableCell>
+                  <TableCell sx={{color:'white',height:'10px',fontFamily:'Poppins',fontSize:'12px',backgroundColor: '#353535'}}>Item</TableCell>
+                  <TableCell sx={{color:'white',height:'10px',fontFamily:'Poppins',fontSize:'12px',backgroundColor: '#353535'}}>Quantity</TableCell>
+                  <TableCell sx={{color:'white',height:'10px',fontFamily:'Poppins',fontSize:'12px',backgroundColor: '#353535'}}>Cost</TableCell>
+                  <TableCell sx={{color:'white',height:'10px',fontFamily:'Poppins',fontSize:'12px',backgroundColor: '#353535'}}>Delivered By</TableCell>
+                  <TableCell sx={{color:'white',height:'10px',fontFamily:'Poppins',fontSize:'12px',backgroundColor: '#353535'}}>Action</TableCell>
                 </TableRow>
               </TableHead >
               <TableBody>
@@ -373,11 +373,11 @@ const [loading, setLoading] = useState(false);
       <TableCell component="th" scope="row" sx={{ width: '20%', padding: '6px' }}>
         {type.charAt(0).toUpperCase() + type.slice(1)}
       </TableCell>
-      <TableCell sx={{ width: '20%', padding: '6px' }}>{equipment.item}</TableCell>
-      <TableCell sx={{ width: '20%', padding: '6px' }}>{equipment.quantity}</TableCell>
-      <TableCell sx={{ width: '20%', padding: '6px' }}>{equipment.cost}</TableCell>
-      <TableCell sx={{ width: '20%', padding: '6px' }}>{equipment.deliveredBy}</TableCell>
-      <TableCell sx={{ width: '20%', padding: '6px' }}>
+      <TableCell sx={{ width: '20%', padding: '6px',fontSize:'12px' }}>{equipment.item}</TableCell>
+      <TableCell sx={{ width: '20%', padding: '6px',fontSize:'12px' }}>{equipment.quantity}</TableCell>
+      <TableCell sx={{ width: '20%', padding: '6px',fontSize:'12px' }}>{equipment.cost}</TableCell>
+      <TableCell sx={{ width: '20%', padding: '6px' ,fontSize:'12px'}}>{equipment.deliveredBy}</TableCell>
+      <TableCell sx={{ width: '20%', padding: '6px',fontSize:'12px' }}>
         <div className='bdaeqis'>
         <IconButton
           aria-label="delete"

@@ -1,7 +1,7 @@
 .dropzone {
   border: 2px dashed #007bff;
   border-radius: 5px;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   cursor: pointer;
   color: #007bff;
@@ -13,6 +13,7 @@
   background-color: #f8f9fa;
   border-color: #0056b3;
 }
+
 
 .dropzone.active {
   background-color: #e9f5ff;
@@ -112,14 +113,15 @@ justify-content: flex-end;
 align-items: center;
 text-align: center;
 flex: 3.7;
-width: 79%;
+width: 76%;
+font-size: 13px;
 
 }
 .uploaded-file-info button{
   background-color: #7b7b7b;
   margin: 0px;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   margin-right: 10px;
 }
 .driverModal {
@@ -140,15 +142,16 @@ width: 79%;
   border-radius: 8px;
   min-width: 420px; /* Adjust based on your content */
   width: auto;
-  max-width: 900px; /* Or any max-width you prefer */
+  width: 450px; /* Or any max-width you prefer */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 2px;
   z-index: 1;
 }
 
 /* Additional styling for modal content */
 .driverModalContent h3, .driverModalContent p {
   margin-top: 0;
+  font-size: 12px;
 }
 
 /* Close button styling inside the modal */
@@ -201,13 +204,16 @@ width: 79%;
 }
 #closepp {
   float: right;
-  font-size: 1.1rem;
+  font-size: 14px;
   cursor: pointer;
   background: rgb(251, 199, 199);
   color: black;
+  width: 120px;
 }
 #closeppd{
 margin-right: 0px;
+font-size: 14px;
+width: 120px;
 }
 
 .highlight-button {

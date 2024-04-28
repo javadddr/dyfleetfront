@@ -42,7 +42,7 @@ padding: 0px;
 
 }
 .addegac{
-  padding: 10px;
+  padding: 5px;
   height: 50px;
   margin: 0px;
 }
@@ -55,12 +55,24 @@ padding: 0px;
 
 .form-containerPPOL.open {
   max-height: 1000px; /* Adjust as necessary */
-  margin-top: 20PX;
+  margin-top:10px;
 }
 .fomequfordrivsd{
   display: flex;
-  padding-top: 20px;
-  margin-bottom: 20px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.fomequfordrivsd input{
+  height: 10px;
+  font-size: 13px;
+}
+.fomequfordrivsd select{
+  height: 10px;
+  font-size: 13px;
+}
+.css-1dgpro0-MuiTableHead-root .MuiTableCell-root{
+  font-size: 12px;
 }
 .containerPPOLmm{
   display: flex;
@@ -92,11 +104,11 @@ padding: 0px;
 .addegac{
   background-color: #4CAF50;
     color: white;
-    font-size: 16px;
+    font-size: 13px;
     border: none;
     cursor: pointer;
     width: 150px;
-    height: 55px;
+    height: 40px;
     border-radius: 5px;
 }
 
@@ -105,14 +117,21 @@ padding: 0px;
   justify-content: flex-end;
   align-items: center;
   text-align: center;
+ 
 
 }
 
 .css-pdct74-MuiTablePagination-selectLabel{
   margin-bottom: 0px;
+  font-size: 13px;
   font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .css-levciy-MuiTablePagination-displayedRows{
   font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-bottom: 0px;
+  
+}
+.css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+  height: 43px;
+  font-size: 13px;
 }

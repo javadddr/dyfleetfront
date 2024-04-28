@@ -44,19 +44,19 @@ function PlaceHolderView({ carCount, driverCount }) {
   return (
     <div className='mainofplacholdring'> 
       <div style={{
-        backgroundImage: `url(${mainpic})`,
+        // backgroundImage: `url(${mainpic})`,
         backgroundSize: 'cover',
         backgroundPosition: 'top',
         width: '1830px',
-        height: '600px',
+        height: '400px',
         className:"containerflow1",
         position: 'relative'
       }}>
          <div className='sidebottiOP'> {/* This div will be absolutely positioned within the container */}
          <div className='titledahsss'>
           To use the dashboard, first create some 
-          <span style={{color: driverCount > 0 ? "black" : "blue",marginLeft:'10px',marginRight:'10px'}} className={driverCount === 0 ? "glow" : ""}>drivers</span> and 
-          <span style={{color: carCount > 0 ? "black" : "blue" ,marginLeft:'10px',marginRight:'10px'}} className={carCount === 0 ? "glow" : ""}>vehicles</span>:
+          <span style={{color: driverCount > 0 ? "black" : "blue",marginLeft:'5px',marginRight:'5px'}} className={driverCount === 0 ? "glow" : ""}>drivers</span> and 
+          <span style={{color: carCount > 0 ? "black" : "blue" ,marginLeft:'5px',marginRight:'5px'}} className={carCount === 0 ? "glow" : ""}>vehicles</span>:
         </div>
 
         <div className='pagedahsss'>

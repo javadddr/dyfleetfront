@@ -568,7 +568,7 @@ const cleanData = (obj) => {
               <div className='btnboth'>
              
               <button id="close" onClick={() => setShowModal(false)}>Cancel</button>
-              <button type="submit">Create vehicle</button>
+              <button id="closeccdo" type="submit">Create vehicle</button>
               </div>
             </form>
           </div>
