@@ -696,12 +696,14 @@ const [tempDescription, setTempDescription] = useState("");
       <td>
         
           {editingFineId === fine._id ? (
-            <TextField
-              size="small"
-              value={tempDescription}
-              onChange={(e) => setTempDescription(e.target.value)}
-              fullWidth
-            />
+            <input
+            type="text"
+            value={tempDescription}
+            onChange={(e) => setTempDescription(e.target.value)}
+            style={{ width: '100%',height:"30px" }}
+            className="form-control"
+            required
+          />
           ) : (
             fine.description
           )}
@@ -709,16 +711,24 @@ const [tempDescription, setTempDescription] = useState("");
       
         <td>
   {editingFineId === fine._id ? (
-    <Autocomplete
-      value={fineForOptions.find(option => option.value === tempFor) || null}
-      onChange={(event, newValue) => {
-        setTempFor(newValue ? newValue.value : "");
-      }}
-      options={fineForOptions}
-      getOptionLabel={(option) => option.label}
-      renderInput={(params) => <TextField {...params} label="For" />}
-   
-    />
+   <div className="form-group-state">
+ 
+   <select
+     id="issuedFor"
+     name="for"
+     value={tempFor}
+     onChange={(e) => setTempFor(e.target.value)}
+     required
+   >
+     <option value="">Select Issued For</option>
+     {fineForOptions.map((option) => (
+       <option key={option.value} value={option.value}>
+         {option.label}
+       </option>
+     ))}
+   </select>
+ </div>
+ 
   ) : (
     fine.for
   )}
@@ -729,16 +739,24 @@ const [tempDescription, setTempDescription] = useState("");
               <td>{fine.cost}</td>
               <td>
   {editingFineId === fine._id ? (
-    <Autocomplete
-      value={fineStatuses.find(option => option.value === tempStatus) || null}
-      onChange={(event, newValue) => {
-        setTempStatus(newValue ? newValue.value : "");
-      }}
-      options={fineStatuses}
-      getOptionLabel={(option) => option.label}
-      isOptionEqualToValue={(option, value) => option.value === value.value}
-      renderInput={(params) => <TextField {...params} />}
-    />
+   <div className="form-group-state">
+ 
+   <select
+     value={tempStatus}
+     onChange={(event) => {
+       setTempStatus(event.target.value);
+     }}
+     required
+   >
+     <option value="">Select Status</option>
+     {fineStatuses.map((status) => (
+       <option key={status.value} value={status.value}>
+         {status.label}
+       </option>
+     ))}
+   </select>
+ </div>
+ 
   ) : (
     <span style={getStatusStyle(fine.status)}>{capitalizeFirstLetter(fine.status)}</span>
   )}
@@ -750,13 +768,13 @@ const [tempDescription, setTempDescription] = useState("");
               <td>{fine.file ? <a href={`${process.env.REACT_APP_BACKEND_URL}/fines/${fine.file}`} target="_blank" rel="noopener noreferrer">See Fine</a> : 'No File'}</td>
               <td style={{ textAlign:'center'}}>
                
-              <img src={del} alt="Delete" style={{ cursor: 'pointer', width: '35%' }} onClick={() => handleDeleteClick(fine._id)} />
+              <img src={del} alt="Delete" style={{ cursor: 'pointer', width: '18%' }} onClick={() => handleDeleteClick(fine._id)} />
               
               {editingFineId !== fine._id ? (
                 <img
                   src={editIcon}
                   alt="Edit"
-                  style={{ cursor: 'pointer', width: '25%' }}
+                  style={{ cursor: 'pointer', width: '18%' }}
                   onClick={() => handleEditClick(fine._id, fine.description, fine.for, fine.status)}
                 />
               ) : (

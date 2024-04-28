@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 .formfineop{
-font-size: 13px;
+font-size: 11px;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@ font-size: 13px;
   margin-left: 20px;
   margin-right: 20px;
   display: flex;
-
+font-size: 12px;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
@@ -42,9 +42,11 @@ font-size: 13px;
 }
 .isufin{
   margin-right: 10px;
+  font-size: 11px;
 }
 .isufin1{
   width: 27.5%;
+  font-size: 11px;
 }
 .mainformfindid{
   width: 98%;
@@ -73,8 +75,8 @@ font-size: 13px;
   font-family:'Inter','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 500;
   color: rgb(255, 255, 255);
-  height: 40px;
-  font-size: 13px;
+  max-height: 30px;
+  font-size: 11px;
   border-right: 1px solid rgb(255, 255, 255);
 
   text-align: center;
@@ -83,17 +85,20 @@ font-size: 13px;
 }
 .trfingerefratth tbody{
   font-size: 13px;
+  
 }
 .trfingerefrat:hover{
   background-color: rgb(63, 63, 63);
-  font-size: 14px;
+  font-size: 13px;
 }
 .trfingerefratth thead{
   background-color: rgb(63, 63, 63);
+  
 }
 .trfingerefratth thead:hover{
   background-color: rgb(63, 63, 63);
-  font-size: 14px;
+  font-size: 13px;
+  height: 30px;
 }
 .exportisod{
   display: flex;
@@ -101,13 +106,14 @@ font-size: 13px;
   justify-content: flex-end;
 }
 .mainexarjo{
-  width: 80%;
+  width: 100%;
 }
 
 .trfingerefratth td{
   border-right: 1px solid rgb(209, 207, 207);
   border-bottom: 1px solid rgb(209, 207, 207);
   font-size: 12px;
+ 
 }
 .css-11jnun4-MuiStack-root{
   margin-left: 10px;
@@ -207,6 +213,7 @@ font-size: 13px;
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  font-size: 11px;
 }
 .isufinvvb4{
   display: flex;
@@ -226,6 +233,7 @@ font-size: 13px;
 
 .trfingerefratth tbody{
   font-size: 13px;
+  
 }
 #issueDate{
   width: 250px;

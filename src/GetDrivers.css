@@ -31,11 +31,11 @@ button.active {
 }
 .filasmargin{
   display: flex;
-  font-size: 14px;
+  font-size: 12px;
 }
 .geeraliindiv1{
   display: flex;
-  font-size: 14px;
+  font-size: 12px;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
@@ -78,7 +78,7 @@ font-size: 12px;
   overflow: hidden; /* Hide overflow */
   white-space: nowrap; /* Prevent wrapping onto a new line */
   text-overflow: ellipsis; /* Use ellipsis for overflow */
-width: 100px;
+width: 150px;
 
 }
 .ddddssx span{
@@ -129,13 +129,13 @@ margin-right:10px;
   font-weight: 500;
   margin-right: 3px;
   margin-left: 3px;
-  font-size: 14px;
+  font-size: 13px;
 }
 .filasmargin span{
   color: #004085;
   font-weight: 500;
   margin-right: 3px;
-  font-size: 14px;
+  font-size: 13px;
   margin-left: 3px;
 }
 
