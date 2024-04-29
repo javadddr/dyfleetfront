@@ -71,7 +71,7 @@
 }
 #cankmanfi2{
   float: right;
-  font-size: 1.1rem;
+  font-size: 15px;
   cursor: pointer;
   background: rgb(251, 199, 199);
   color: black;
@@ -106,7 +106,7 @@ margin-left: 5px;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1.1rem;
+    font-size: 15px;
     margin-right: 10px;
    
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -143,7 +143,7 @@ margin-left: 5px;
 .Addvehicleopl {
   display: flex;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin-bottom: 7px;
 
   padding-top: 20px;
@@ -201,3 +201,21 @@ margin-left: 5px;
 .users-container td.action {
   width: 10%;
 }
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  height: 45px;
+  font-size: 14px;
+}
+.css-1h51icj-MuiAutocomplete-root .MuiOutlinedInput-root{
+  padding: 2px;
+}
+.css-6od3lo-MuiChip-label{
+  font-size: 12px;
+  padding-left: 2px;
+    padding-right: 2px;
+
+}
+.css-1h51icj-MuiAutocomplete-root .MuiAutocomplete-tag{
+  padding: 0px;
+  margin: 0px;
+}
+ 

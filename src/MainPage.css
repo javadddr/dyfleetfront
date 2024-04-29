@@ -113,7 +113,7 @@
 .user-info {
   display: none;
   position: absolute;
-  bottom: 18%;
+  bottom: 11%;
   left: 49%;
   width: 100%;
   background-color: #ffffff;
@@ -128,7 +128,7 @@
 .help-info{
   display: none;
   position: absolute;
-  bottom: 14.5%;
+  bottom: 7.5%;
   left: 49%;
   width: 100%;
   background-color: #ffffff;
@@ -142,7 +142,7 @@
 .settings-info{
   display: none;
   position: absolute;
-  bottom: 10%;
+  bottom: 3.7%;
   left: 49%;
   width: 100%;
   background-color: #ffffff;

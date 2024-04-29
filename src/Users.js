@@ -165,18 +165,18 @@ const combinedOptions = [allAreasOption, ...areas];
       <div className='tabeluserddics'>
       <table>
   <thead>
-    <tr>
+    <tr style={{fontSize:"12px"}}>
       <th className="username">Username</th>
       <th className="email">Email</th>
       <th className="roles">Roles</th>
       <th className="status">Status</th>
-      <th className="allowedArea">Allowed Area</th>
+      <th className="allowedArea" >Allowed Area</th>
       <th className="action">Action</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody style={{fontSize:"12px"}}>
     {users.map(user => (
-      <tr key={user._id}>
+      <tr key={user._id} tyle={{ height: '30px' }}>
         <td className="username">{user.username}</td>
         <td className="email">{user.email}</td>
         <td className="roles">
@@ -195,6 +195,7 @@ const combinedOptions = [allAreasOption, ...areas];
             name="active"
             value={editFormData.active ? "Active" : "Pending"} // Set based on boolean
             onChange={handleEditFormChange}
+            style={{height:"20px"}}
         >
             <option value="" disabled>Select the status</option>
             <option value="Active">Active</option>
