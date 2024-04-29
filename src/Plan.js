@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 
 import "./Plan.css"
 
@@ -45,6 +45,42 @@ const Plan = () => {
   const token = localStorage.getItem('userToken');
 
   const priod="none"  //monthly,yearly,none
+  const [billing, setBilling] = useState(null); 
+  console.log(billing)
+  const fetchBillingData = async () => {
+    const token = localStorage.getItem('userToken'); // Get the token from localStorage
+    if (!token) {
+      console.error("Token is missing!");
+      return;
+    }
+    
+   
+    try {
+      const response = await fetch('https://billing.dynamofleet.com/user', {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`, // Use the token in Authorization header
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json(); // Parse JSON data from response
+      setBilling(data); // Set the fetched data to billing state
+    } catch (error) {
+      console.error('Failed to fetch billing data:', error);
+    } finally {
+
+    }
+  };
+
+  useEffect(() => {
+    fetchBillingData(); // Fetch billing data when component mounts
+  }, []); // Empty dependency array means this effect runs only once after the initial render
+
+  // Remain
 
   const handleSubscribeClick = () => {
     // Assuming 'userInfo' contains 'token' and 'userId'
