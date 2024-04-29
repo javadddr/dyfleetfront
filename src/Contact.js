@@ -36,7 +36,7 @@ const Contact = () => {
       console.log(customerMessage);
   
       
-      fetch('https://api.globalpackagetracker.com/contact', {
+      fetch('https://billing.dynamofleet.com/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
