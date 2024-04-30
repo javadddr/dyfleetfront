@@ -49,7 +49,7 @@ function Login() {
         const daysSinceCreation = Math.floor(timeDiff / (1000 * 3600 * 24)); // Convert milliseconds to days
         localStorage.setItem('createdAtDays', daysSinceCreation.toString()); // Save as a string
 
-    
+      navigate('/main'); // Redirect to MainPage
     } else {
       setErrorMessage('Login failed. Please check your credentials and try again.');
     }
@@ -57,13 +57,11 @@ function Login() {
   useEffect(() => {
     if (errorMessage) {
       const timer = setTimeout(() => {
-        setErrorMessage('');  // Clear the error message after 3 seconds
-      }, 3000);  // 3000 milliseconds = 3 seconds
-  
-      return () => clearTimeout(timer);  // Clear the timer if the component unmounts or if errorMessage changes before 3 seconds are up
+        setErrorMessage('');
+      }, 3000);
+      return () => clearTimeout(timer);
     }
   }, [errorMessage]);
-  
   return (
     <div className='mainlogin'>
     <div className="login-container">
