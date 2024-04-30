@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect,useRef } from 'react';
 import "./PlaceHolderView.css";
 import Vehicles from './Vehicles';
 import Drivers from './Drivers';
@@ -6,16 +6,34 @@ import Loading from './Loading';
 import dd from "./dd.svg";
 import car from "./car.svg";
 import mainpic from "./cfl.jpeg"
+import { useCars } from './CarsContext';
+import { useDrivers } from './DriversContext'; // Import useDrivers hook
+
 import Fornonadmin from './Fornonadmin';
 function PlaceHolderView({ carCount, driverCount }) {
   const pages = [
     { id: 2, name: 'Create Vehicles', component: Vehicles, icon: car },
     { id: 3, name: 'Create Drivers', component: Drivers, icon: dd },
   ];
+  const [showUserInfopp, setShowUserInfopp] = useState(false);
+  const [showUserInfopp2, setShowUserInfopp2] = useState(false);
   const userRoles = localStorage.getItem('userRoles'); 
   const [activePageId, setActivePageId] = useState(pages[0].id);
+  console.log("activea",activePageId)
   const [loading, setLoading] = useState(false); 
+  const { cars } = useCars();
+  useEffect(() => {
 
+    setShowUserInfopp(cars.length === 0 && activePageId === 2);
+}, [cars, activePageId]); // Dependency on cars array and activePageId
+
+
+const { drivers } = useDrivers(); // Assuming this gives you the drivers list
+useEffect(() => {
+
+  setShowUserInfopp2(drivers.length === 0 && activePageId === 3);
+}, [drivers, activePageId]); // Dependency on cars array and activePageId
+  const userInfoRef = useRef(null); // Create a ref for the user info tooltip
   useEffect(() => {
     // Simulate loading for 1 second on component mount
     setLoading(true);
@@ -47,8 +65,8 @@ function PlaceHolderView({ carCount, driverCount }) {
         // backgroundImage: `url(${mainpic})`,
         backgroundSize: 'cover',
         backgroundPosition: 'top',
-        width: '1830px',
-        height: '400px',
+        width: '1130px',
+        height: '300px',
         className:"containerflow1",
         position: 'relative'
       }}>
@@ -71,7 +89,14 @@ function PlaceHolderView({ carCount, driverCount }) {
             </button>
           ))}
         </div>
+        <div ref={userInfoRef} className={`user-infopp ${showUserInfopp ? 'active' : ''}`}>
+        Add New Vehicle Here!
+        </div>
+        <div ref={userInfoRef} className={`user-infopp ${showUserInfopp2 ? 'active' : ''}`}>
+        Add New Driver Here!
+        </div>
       </div>
+    
       </div>
      
       {renderActiveComponent()}

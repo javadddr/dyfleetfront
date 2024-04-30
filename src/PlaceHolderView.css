@@ -17,10 +17,10 @@ width: 35%;
 }
 
 .titledahsss{
-  margin-top: 30%;
+  margin-top: 20%;
   margin-left:10% ;
   margin-bottom: 30px;
-  font-size: 1.2rem;
+  font-size: 15px;
   width: 67%;
   font-family:'Raleway','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 600;
@@ -37,18 +37,50 @@ width: 35%;
   background-color: rgb(135, 149, 240);
   color: rgb(255, 255, 255);
   border: 1px solid black;
+ 
+  padding: 6px;
+  font-size: 13px;
+
  }
  .placflowbu{
   background-color:rgb(246, 242, 238);
   color: rgb(0, 0, 0);
   border: 1px solid rgb(185, 184, 184);
+  padding: 6px;
+  font-size: 13px;
+  padding-right: 9px;
+
  }
  .placflowbuactive button{
-padding: 5px 10px;
+padding: 2px 6px;
  }
  .mainofplacholdring{
-  background-color: rgb(227, 232, 227);
+  background-color: rgb(255, 255, 255);
  }
+ .user-infopp.active {
+  display: block;
+  width: 16%;
+  z-index: 1000;
+  font-size: 13px;
+  border:1px solid #000000;
+}
+.user-infopp {
+  display: flex;
+ 
+  display: none;
+  position: absolute;
+  bottom: 10%;
+  left: 111%;
+  width: 10%;
+  background-color: #ffffff;
+  color: #f8f9fa;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.15);
+  animation: slideUp 0.5s ease-out forwards;
+  color: #000000;
+  font-size: 13px;
+}
 
  .glow {
   color: blue;
