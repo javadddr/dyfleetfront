@@ -34,11 +34,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-  padding: 20px;
+  padding: 17px;
   z-index: 1000; /* Higher than overlay */
   border: 1px solid #ccc;
-  height: 600px;
-  width: 500px;
+  height: 480px;
+  width: 400px;
+  border-radius: 10px;
 }
 
 .modalusercreatin form {
@@ -47,7 +48,7 @@
 }
 
 .modalusercreatin label {
-  margin-bottom: 10px;
+  margin-bottom: 3px;
 }
 
 .modalusercreatin input, .modalusercreatin select {
@@ -55,8 +56,8 @@
 }
 
 .modalusercreatin button {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   
 }
 .btnbothccxs{
@@ -71,7 +72,7 @@
 }
 #cankmanfi2{
   float: right;
-  font-size: 15px;
+  font-size: 13px;
   cursor: pointer;
   background: rgb(251, 199, 199);
   color: black;
@@ -80,10 +81,10 @@
   text-align: center;
   align-items: center;
   cursor: pointer;
-  padding: 10px 5px;
+  padding: 7px 3.5px;
   padding-left: 0px;
   padding-right: 0px;
-  width: 150px;
+  width: 100px;
 
   border: none;
   border-radius: 5px;
@@ -98,15 +99,15 @@ margin-left: 5px;
     text-align: center;
     align-items: center;
     cursor: pointer;
-    padding: 10px 5px;
+    padding: 7px 3.5px;
     padding-left: 0px;
     padding-right: 0px;
-    width: 150px;
+    width: 100px;
     background-color: #0843bf;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 15px;
+    font-size: 13px;
     margin-right: 10px;
    
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -120,8 +121,9 @@ margin-left: 5px;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
  align-items: center;
+ font-size: 14px;
   
 }
 .userfotbaba1 {
@@ -130,7 +132,7 @@ margin-left: 5px;
 
 .userfotbaba2 {
   flex: 2; /* Takes up 2 parts of the space */
-  width: 60px;
+  width: 90px;
 }
 .userfotbaba input{
   width: 100%;

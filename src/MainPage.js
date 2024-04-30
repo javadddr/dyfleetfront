@@ -295,10 +295,10 @@ console.log(chekio)
             <span>Contact us</span>
             <img src={e} alt="Contact Logo" style={{ width: '10%', height: 'auto' }} />
           </div>
-          <div className='setlinks' onClick={() => handleSetComponent('Tutorial')}>
+          {/* <div className='setlinks' onClick={() => handleSetComponent('Tutorial')}>
             <span>Tutorial and Learning</span>
             <img src={l} alt="Tutorial Logo" style={{ width: '10%', height: 'auto' }} />
-          </div>
+          </div> */}
           <div className='setlinks' onClick={() => handleSetComponent('Plan')}>
             <span>My Plan</span>
             <img src={b} alt="Plan Logo" style={{ width: '10%', height: 'auto' }} />

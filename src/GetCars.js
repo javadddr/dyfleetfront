@@ -232,7 +232,7 @@ const stateCounts = cars.reduce((acc, car) => {
         onDrop={(e) => { handleDrop(e, status); handleDragLeaveOrDrop(); }}
         onDragOver={(e) => handleDragOver(e, status)}
         onDragLeave={handleDragLeaveOrDrop}
-        style={{ height: activeStatuses.length<5 ? '900px' : '500px' }}
+        style={{ height: activeStatuses.length<5 ? '720px' : '400px' }}
       >
         <div className="car-cards-container">
         {cars.filter(car => car.state === status && carMatchesSearchQuery(car)).map(car => {
@@ -273,9 +273,9 @@ const stateCounts = cars.reduce((acc, car) => {
         </div>
 
 {currentDrivers.length>0 && <div className='picsinfogeneral' style={{
-  height: currentDrivers.length === 1 ? '90px' : currentDrivers.length === 2 ? '130px' : '140px',
+  height: currentDrivers.length === 1 ? '72px' : currentDrivers.length === 2 ? '104px' : '112px',
   alignItems:'center',
-  marginRight:currentDrivers.length === 1 ? '40px' : currentDrivers.length === 2 ? '25px' : '15px',
+  marginRight:currentDrivers.length === 1 ? '32px' : currentDrivers.length === 2 ? '20px' : '12px',
   }}>
 {currentDrivers.slice(0, 2).map((driver, index) => (
   <div 
@@ -288,8 +288,8 @@ const stateCounts = cars.reduce((acc, car) => {
         src={`${process.env.REACT_APP_BACKEND_URL}/uploads/${driver.picture}`} 
         alt={`${driver.firstName} ${driver.lastName}`} 
         style={{ 
-          width: currentDrivers.length === 1 ? '90px' : currentDrivers.length === 2 ? '60px' : '50px', 
-          height: currentDrivers.length === 1 ? '90px' : currentDrivers.length === 2 ? '60px' : '50px', 
+          width: currentDrivers.length === 1 ? '72px' : currentDrivers.length === 2 ? '48px' : '40px', 
+          height: currentDrivers.length === 1 ? '72px' : currentDrivers.length === 2 ? '48px' : '40px', 
           borderRadius: '50%', 
           position: 'relative' 
         }} 
@@ -299,8 +299,8 @@ const stateCounts = cars.reduce((acc, car) => {
         src={nopic} 
         alt="No picture available" 
         style={{ 
-          width: currentDrivers.length === 1 ? '90px' : currentDrivers.length === 2 ? '60px' : '50px', 
-          height: currentDrivers.length === 1 ? '90px' : currentDrivers.length === 2 ? '60px' : '50px', 
+          width: currentDrivers.length === 1 ? '72px' : currentDrivers.length === 2 ? '48px' : '40px', 
+          height: currentDrivers.length === 1 ? '72px' : currentDrivers.length === 2 ? '48px' : '40px', 
           borderRadius: '50%', 
           marginRight:'20px',
           position: 'relative' 
@@ -313,10 +313,10 @@ const stateCounts = cars.reduce((acc, car) => {
     
       style={{ 
         position: 'absolute', 
-        bottom: currentDrivers.length === 1 ? -23 : currentDrivers.length === 2 ? 4 : 12, 
-        right: currentDrivers.length === 1 ? -25 : currentDrivers.length === 2 ? 4 : 12, 
-        width: currentDrivers.length === 1 ? '25px' : currentDrivers.length === 2 ? '20px' : '15px', 
-        height: currentDrivers.length === 1 ? '25px' : currentDrivers.length === 2 ? '20px' : '15px', 
+        bottom: currentDrivers.length === 1 ? -2.4 : currentDrivers.length === 2 ? 4 : 2.6, 
+        right: currentDrivers.length === 1 ? -2 : currentDrivers.length === 2 ? 14 : 26.6, 
+        width: currentDrivers.length === 1 ? '20px' : currentDrivers.length === 2 ? '16px' : '12px', 
+        height: currentDrivers.length === 1 ? '20px' : currentDrivers.length === 2 ? '16px' : '12px', 
         borderRadius: '50%', 
         border: '2px solid white' 
       }}
@@ -331,10 +331,10 @@ const stateCounts = cars.reduce((acc, car) => {
   )}
 </div>}
 {currentDrivers.length===0 && <div className='picsinfogeneral' style={{
-  height: currentDrivers.length === 1 ? '90px' : currentDrivers.length === 2 ? '130px' : '140px',
+  height: currentDrivers.length === 1 ? '72px' : currentDrivers.length === 2 ? '120px' : '140px',
   alignItems:'center',
-  marginRight:currentDrivers.length === 1 ? '30px' : currentDrivers.length === 2 ? '0px' : '0px',
-  marginTop:currentDrivers.length === 1 ? '30px' : currentDrivers.length === 2 ? '0px' : '0px',
+  marginRight:currentDrivers.length === 1 ? '24px' : currentDrivers.length === 2 ? '0px' : '0px',
+  marginTop:currentDrivers.length === 1 ? '24px' : currentDrivers.length === 2 ? '0px' : '0px',
   }}>
 <h6 className='nodhsdse'>No Driver Assigned</h6>
 </div>}

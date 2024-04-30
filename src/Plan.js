@@ -153,7 +153,7 @@ const Plan = () => {
         </table>
     </div>
      <div className='cards'>
-        {priod=="none"&&<div className='card1'>
+        {priod==""&&<div className='card1'>
           <div className='topnote'>
           <h1 id='justhdes'>Free</h1>
             <h1><span>No Billing</span></h1>
@@ -212,7 +212,7 @@ const Plan = () => {
           </div>
           <div className='forfree1'>
          
-  <button className='linkmainsdrr' onClick={handleSubscribeClick}>Upgrade Your Plan</button>
+  <button className='linkmainsdrr' onClick={handleSubscribeClick}>Subscribe Now!</button>
 
 
 </div>
