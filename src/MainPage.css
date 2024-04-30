@@ -113,7 +113,7 @@
 .user-info {
   display: none;
   position: absolute;
-  bottom: 11%;
+  bottom: 18%;
   left: 49%;
   width: 100%;
   background-color: #ffffff;
@@ -128,7 +128,7 @@
 .help-info{
   display: none;
   position: absolute;
-  bottom: 7.5%;
+  bottom: 14.7%;
   left: 49%;
   width: 100%;
   background-color: #ffffff;
@@ -142,7 +142,7 @@
 .settings-info{
   display: none;
   position: absolute;
-  bottom: 3.7%;
+  bottom: 10.7%;
   left: 49%;
   width: 100%;
   background-color: #ffffff;
@@ -452,6 +452,7 @@ font-size: 22px;
   border: 1px solid #949494;
   padding: 3px;
   border-radius: 5px;
+  background-color: rgb(236, 245, 202);
   
 }
 #capacityinfomain1{

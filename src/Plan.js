@@ -37,29 +37,28 @@ const Plan = () => {
   const { cars } = useCars();
   const { drivers } = useDrivers(); // Assuming this gives you the drivers list
   
-  const capacity = parseInt(localStorage.getItem('capacity'), 10);
- 
-
+  const [billing, setBilling] = useState(null);  // State to hold billing data
+  const [capacity, setCapacity] = useState(0);  // State to hold capacity from billing
+  const [priod, setPeriod] = useState("none");
+  const [isLoading, setIsLoading] = useState(false);
   const bracketKey = findPricingBracket(capacity); 
   const selectedPricing = pricingData[bracketKey];
   const token = localStorage.getItem('userToken');
+  const [totalPrice, setTotalPrice] = useState(0);
 
-  const priod="none"  //monthly,yearly,none
-  const [billing, setBilling] = useState(null); 
-  console.log(billing)
   const fetchBillingData = async () => {
-    const token = localStorage.getItem('userToken'); // Get the token from localStorage
+    const token = localStorage.getItem('userToken');  // Get the token from localStorage
     if (!token) {
       console.error("Token is missing!");
       return;
     }
     
-   
+    setIsLoading(true);
     try {
       const response = await fetch('https://billing.dynamofleet.com/user', {
         method: 'GET',
         headers: {
-          'Authorization': `Bearer ${token}`, // Use the token in Authorization header
+          'Authorization': `Bearer ${token}`,  // Use the token in Authorization header
         },
       });
 
@@ -67,20 +66,30 @@ const Plan = () => {
         throw new Error('Network response was not ok');
       }
 
-      const data = await response.json(); // Parse JSON data from response
-      setBilling(data); // Set the fetched data to billing state
+      const data = await response.json();  // Parse JSON data from response
+      setBilling(data);  // Set the fetched data to billing state
     } catch (error) {
       console.error('Failed to fetch billing data:', error);
     } finally {
-
+      setIsLoading(false);
     }
   };
 
   useEffect(() => {
-    fetchBillingData(); // Fetch billing data when component mounts
-  }, []); // Empty dependency array means this effect runs only once after the initial render
+    fetchBillingData();  // Fetch billing data when component mounts
+  }, []);  // Empty dependency array means this effect runs only once after the initial render
 
-  // Remain
+  useEffect(() => {
+    if (billing && billing.user && billing.user.capacity) {
+      setCapacity(billing.user.capacity);
+    }
+    if (billing && billing.user && billing.user.subscription) {
+      setPeriod(billing.user.subscription.billing_cycle);
+      setTotalPrice(billing.user.subscription.price / 100);  // Assuming price is in cents
+    } else {
+      setPeriod("none");
+    }
+  }, [billing]);
 
   const handleSubscribeClick = () => {
     // Assuming 'userInfo' contains 'token' and 'userId'
@@ -210,7 +219,7 @@ const Plan = () => {
           <div className="greenSquare"></div>
           <div className="greenSquare2"></div>
         </div>}
-       {priod=="monthly" &&<div className='card1'>
+       {priod=="month" &&<div className='card1'>
          
           <div className='topnote'>
          
@@ -218,7 +227,7 @@ const Plan = () => {
             <div className='prititin'>
               <div className='prititin1'> <h1><span>{selectedPricing.monthly !== "N/A" ? "\u0024" : ""}  {selectedPricing.monthly !== "N/A" ? selectedPricing.monthly : "Select the range"}</span></h1><p>{selectedPricing.monthly !== "N/A" ? " Per vehicle /per month" : ""}</p></div>
               
-               <div className='prititin2'><h1><span> {selectedPricing.totalMonthly !== "N/A" ? "\u0024" : ""}  {capacity* parseInt((selectedPricing.monthly !== "N/A" ? selectedPricing.monthly : "Select the range"))}</span></h1><p> {selectedPricing.totalMonthly !== "N/A" ? "Total Monthly" : ""} </p></div>
+               <div className='prititin2'><h1><span> {selectedPricing.totalMonthly !== "N/A" ? "\u0024" : ""}  {(totalPrice !== "N/A" ? totalPrice : "Select the range")}</span></h1><p> {selectedPricing.totalMonthly !== "N/A" ? "Total Monthly" : ""} </p></div>
               
                </div>
           
@@ -284,14 +293,14 @@ const Plan = () => {
           <div className="greenSquare"></div>
           <div className="greenSquare2"></div>
         </div>}
-        {priod=="yearly" && <div className='card1'>
+        {priod=="year" && <div className='card1'>
         <div className='topnote'>
          
         <h1 id='justhdes'>Annually</h1>
          <div className='prititin'>
            <div className='prititin1'> <h1><span>{selectedPricing.monthlyDiscount !== "N/A" ? "\u0024" : ""} {selectedPricing.monthlyDiscount !== "N/A" ? selectedPricing.monthlyDiscount : "Select the range"} </span></h1><p> {selectedPricing.monthlyDiscount !== "N/A" ? " Per vehicle /per month" : ""}</p></div>
            
-            <div className='prititin2'><h1><span>{selectedPricing.yearlyDiscount !== "N/A" ? "\u0024" : ""} {(capacity* parseInt(selectedPricing.monthlyDiscount !== "N/A" ? selectedPricing.monthlyDiscount : "Select the range"))*12}</span></h1><p>{selectedPricing.totalMonthly !== "N/A" ? "Total Annually" : ""}</p></div>
+            <div className='prititin2'><h1><span>{selectedPricing.yearlyDiscount !== "N/A" ? "\u0024" : ""} {(totalPrice !== "N/A" ? totalPrice : "Select the range")}</span></h1><p>{selectedPricing.totalMonthly !== "N/A" ? "Total Annually" : ""}</p></div>
         
             </div>
        

@@ -120,12 +120,12 @@ html, body {
 
 
 .error-message {
-  color: #9c1105;
+  color: #f7f7f7;
   text-align: center;
 
- padding: 10px;
+ padding: 7px;
  border-radius: 10px;
-
+margin-bottom: 0px;
 }
 
 .password-field {
@@ -235,8 +235,11 @@ justify-content: flex-start;
 
 .passwrongi{
   position: fixed;
-  margin-top: 12%;
-  font-size: 1rem;
+  margin-top: -600px;
+  font-size: 15px;
+  background-color: #9c1105;
+  border-radius: 10px;
+  margin-left: 0.5%;
   font-family:'Roboto','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .login-form button {
