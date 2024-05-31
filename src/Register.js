@@ -2,11 +2,12 @@ import React, { useState,useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
-
+import logo from "./logo5.jpeg"
 import "./Register.css"
 import "./Login.css"
 import eye from "../src/eye.png"
 import eye1 from "../src/eye1.png"
+import Modal from './Modal'; // Import the modal component
 function Register() {
   const navigate = useNavigate();
   const [alertType, setAlertType] = useState('error');
@@ -65,7 +66,7 @@ function Register() {
             setTimeout(() => navigate('/login'), 700); // Navigate after the alert is hidden
           }
          
-        }, 3000);
+        }, 40000);
   
       } catch (error) {
         console.error('Registration error:', error);
@@ -130,12 +131,23 @@ function Register() {
           <button id='justatikso' type="submit" className="form-submit" disabled={isLoading}>
             {isLoading ? 'Registering...' : 'Register'}
           </button>
+          <h6 className="term-form-footer">
+  By registering, you accept our <br></br><a href="https://dynamofleet.com/terms-of-service" target="_blank" rel="noopener noreferrer" style={{ color: 'blue' }}>Terms of Service</a> and <a href="https://dynamofleet.com/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: 'blue' }}>Privacy Notice</a>.
+</h6>
 
           <p className="form-footer">
              <Link to="/login">Already have an account? <span>Log in here</span></Link>.
           </p>
         </form>
+        <div className="greenSquare"></div>
+          <div className="greenSquare2"></div>
+         
       </div>
+      <div className='company-info'>
+      <img src={logo} alt="Company Logo" style={{ width: '40px', height: 'auto',marginRight:"4px" }} /><br></br>
+      <a href="https://dynamofleet.com/" target="_blank" rel="noopener noreferrer" >DynamoFleet</a> is a premium product developed by DynamoChart UG, based in Germany.<br></br>&copy; 2024 DynamoChart UG. All rights reserved.
+    </div>
+    <Modal show={showAlert} message={message} onClose={() => setShowAlert(false)} />
     </div>
   );
 }

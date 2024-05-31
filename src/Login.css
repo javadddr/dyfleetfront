@@ -86,15 +86,20 @@ html, body {
   font-size: 16px;
 }
 
-
+.term-form-footer{
+  font-size: 12px;
+  text-align: center;
+  color: #5d5d5d;
+  margin-top: 5px;
+}
 
 #justatikso{
   width: 70%;
   padding: 7px;
-  background-color: #23a6d5;
+  background-color: #10ad6c;
   border: none;
   border-radius: 8px;
-  color: #030303;
+  color: #ffffff;
   
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -148,8 +153,8 @@ justify-content: flex-start;
 
 .password-toggle {
   position: absolute;
-  left: 82%;
-  top: 61%;
+  left: 78%;
+  top: 59%;
   transform: translateY(-50%);
   cursor: pointer;
  
@@ -275,3 +280,35 @@ color: #120ee5;
 }
 
 
+/* Reintroduced styles for green squares */
+.greenSquare {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -35px;
+  width: 88px;
+  height: 88px;
+  background-color: #0cc652;
+  opacity: 0.2;
+  border-radius: 8px;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+.greenSquare2 {
+  position: absolute;
+  content: "";
+  top: 35px;
+  right: -35px;
+  width: 88px;
+  height: 88px;
+  background-color: #0cc652;
+  opacity: 0.2;
+  border-radius: 8px;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+.term-form-footer a{
+  margin-top: 0px;
+}

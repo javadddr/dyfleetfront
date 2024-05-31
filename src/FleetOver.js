@@ -701,7 +701,7 @@ if (loadingO) {
             showTotal={true}
             totalFormat="percentage"   //can be "number" or "percentage"
             totalSize={15}
-            title="Drivers Status"
+            title="Vehicles Status"
             showSmall={3}
             strokeWidth="0"
             chartTemplate="t2" //chartTemplate can be "t1" or "t2"
