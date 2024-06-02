@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import "./Login.css"
-
+import logo from "./logo5.jpeg"
 import eye from "../src/eye.png"
 import eye1 from "../src/eye1.png"
 function Login() {
@@ -51,14 +51,14 @@ function Login() {
 
       navigate('/main'); // Redirect to MainPage
     } else {
-      setErrorMessage('Login failed. Please check your credentials and try again.');
+      setErrorMessage('Login failed. Please ensure you have activated your account using the activation link sent to your email. If you have already activated your account, please verify your credentials and try again.');
     }
   };
   useEffect(() => {
     if (errorMessage) {
       const timer = setTimeout(() => {
         setErrorMessage('');
-      }, 3000);
+      }, 40000);
       return () => clearTimeout(timer);
     }
   }, [errorMessage]);
@@ -107,7 +107,13 @@ function Login() {
       </div>
     
     </form>
+    <div className="greenSquare"></div>
+          <div className="greenSquare2"></div>
   </div>
+  <div className='company-info'>
+      <img src={logo} alt="Company Logo" style={{ width: '40px', height: 'auto',marginRight:"4px" }} /><br></br>
+      <a href="https://dynamofleet.com/" target="_blank" rel="noopener noreferrer" >DynamoFleet</a> is a premium product developed by DynamoChart UG, based in Germany.<br></br>&copy; 2024 DynamoChart UG. All rights reserved.
+    </div>
   </div>
   );
 }

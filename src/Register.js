@@ -73,7 +73,7 @@ function Register() {
         setMessage('An error occurred. Please try again.');
         setAlertType('error');
         setShowAlert(true);
-        setTimeout(() => setShowAlert(false), 3000); // Hide alert after 3 seconds
+        setTimeout(() => setShowAlert(false), 20000); // Hide alert after 3 seconds
       }
     }, 100); // Short delay to reset the showAlert state
   };
@@ -147,7 +147,7 @@ function Register() {
       <img src={logo} alt="Company Logo" style={{ width: '40px', height: 'auto',marginRight:"4px" }} /><br></br>
       <a href="https://dynamofleet.com/" target="_blank" rel="noopener noreferrer" >DynamoFleet</a> is a premium product developed by DynamoChart UG, based in Germany.<br></br>&copy; 2024 DynamoChart UG. All rights reserved.
     </div>
-    <Modal show={showAlert} message={message} onClose={() => setShowAlert(false)} />
+    <Modal show={showAlert} message={message} onClose={() => setShowAlert(false)} alertType={alertType} />
     </div>
   );
 }
