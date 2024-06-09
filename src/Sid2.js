@@ -42,7 +42,7 @@ const FileUploadContainer = styled('div')(({ theme, isDragActive }) => ({
 }));
 
 const fineTypes = [
-  { category: 'For Vehicle', label: 'Equipment for Car', value: 'carEquipment' },
+  { category: 'For Vehicle', label: 'Equipment for Vehicle', value: 'carEquipment' },
   { category: 'For Vehicle', label: 'Equipment for Working', value: 'workEquipment' },
   { category: 'For Driver', label: 'Clothing', value: 'Clothing' },
   { category: 'For Driver', label: 'Other', value: 'Other' },
@@ -293,7 +293,17 @@ const deleteEquipment = async (id, type) => {
     width: '250px', // Ensure it takes the full width available
   }));
   
+  const styles = {
+    table: {
+        width: '100%',
+        borderCollapse: 'separate',
+        boxShadow: '0 0 10px rgba(0,0,0,0.1)',
+        fontSize: "14px",
+      
+        borderSpacing: '0',
+    },
   
+};
   
   const GroupItems = styled('ul')(({ theme }) => ({
     padding: 0,
@@ -340,7 +350,7 @@ const deleteEquipment = async (id, type) => {
     <div className="mainformfindid">
    
        <div className={userRoles === 'user' ? "hidddenforuserdfj" : "containerPPOLmm"}>
-      <button className="add-equipment-btn" onClick={() => setIsFormVisible(!isFormVisible)}>
+      <button id="add-equipment-btndd" onClick={() => setIsFormVisible(!isFormVisible)}>
       <img src={plusi} alt="Add" style={{width:'12%',marginRight: "8px" }} />
       Add New Equipment
     </button>
@@ -351,153 +361,127 @@ const deleteEquipment = async (id, type) => {
 <form onSubmit={handleSubmit} className='formfineop'>
   <div className='typdatefine' style={{ width: '100%' }}>
   <div className="isufin">
-  <Box sx={{ '& > :not(style)': { m: 1, width: '100%' } }}>
-          <TextField
-            id="itemId"
-            name="itemId"
-            label="Item ID"
-            type="number" // Ensure the input is treated as a numeric field
-            InputLabelProps={{
-              shrink: true,
-            }}
-            variant="outlined"
-            value={form.itemId}
-            onChange={handleChange}
-            required
-            fullWidth
-          />
-        </Box>
-        </div>
-    <div className="isufin">
-    <Autocomplete
-  disablePortal
-  id="type-combo-box"
-  options={fineTypes}
-  groupBy={(option) => option.category}
-  getOptionLabel={(option) => option.label}
-  value={form.type ? fineTypes.find(option => option.value === form.type) : null}
-  onChange={(event, newValue) => {
-    setForm({ ...form, type: newValue ? newValue.value : '' });
-  }}
-  renderInput={(params) => <TextField {...params} label="Type" required />}
-  renderGroup={(params) => (
-    <li key={params.key}>
-      <GroupHeader>{params.group}</GroupHeader>
-      <GroupItems>{params.children}</GroupItems>
-    </li>
-  )}
-  sx={{ width: 270,color:'blue' }}
-/>
-
-    </div>
-
-    <div className="isufin">
-      <Box
-        sx={{
-          '& > :not(style)': { m: 1, width: '100%' },
-        }}
-        noValidate
-        autoComplete="off"
-      >
-        <TextField
-          id="name"
-          name="name"
-          label="Name" // Changed to "Name" to match the state structure
-          variant="outlined"
-          value={form.name}
-          onChange={handleChange}
-          required
-          fullWidth
-        />
-      </Box>
-    </div>
-
-    <div className="isufin">
-      <Box
-        sx={{
-          '& > :not(style)': { m: 1, width: '100%' },
-        }}
-      >
-        <TextField
-          id="description"
-          name="description"
-          label="Description"
-          variant="outlined"
-          value={form.description}
-          onChange={handleChange}
-          fullWidth
-        />
-      </Box>
-    </div>
-
-    <div className="isufin">
-    <Box sx={{ '& > :not(style)': { m: 1, width: '100%' }, display: 'flex', alignItems: 'flex-end' }}>
-
-  <TextField
-    fullWidth
-    id="costPerUnit"
-    name="costPerUnit"
-    label="Cost Per Unit"
+  <input
+    id="itemId"
+    name="itemId"
     type="number"
-    InputProps={{
-      startAdornment: <InputAdornment position="start">{currency.symbol}</InputAdornment>,
-    }}
-    value={form.costPerUnit}
+    placeholder="Item ID"
+    value={form.itemId}
     onChange={handleChange}
     required
+    style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
   />
-    <Select
-    value={currency.label}
-    onChange={(e) => setCurrency(currencies.find(c => c.label === e.target.value))}
-    sx={{ width: 'auto', marginRight: 1 }}
+</div>
+
+<div className="isufin" style={{ width: '270px', color: 'blue', margin: '8px 9px' }}>
+
+  <select
+    id="type-combo-box"
+    value={form.type}
+    onChange={(e) => {
+      setForm({ ...form, type: e.target.value });
+    }}
+    required
+    style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
   >
-    {currencies.map((option) => (
-      <MenuItem key={option.label} value={option.label}>
-        {option.label}
-      </MenuItem>
+    {fineTypes.map((option) => (
+      <optgroup key={option.category} label={option.category}>
+        <option value={option.value}>{option.label}</option>
+      </optgroup>
     ))}
-  </Select>
-</Box>
-    </div>
+  </select>
+</div>
+
 
     <div className="isufin">
-      <Box
-        sx={{
-          '& > :not(style)': { m: 1, width: '100%' },
-        }}
-      >
-        <TextField
-          id="vendor"
-          name="vendor"
-          label="Vendor"
-          variant="outlined"
-          value={form.vendor}
-          onChange={handleChange}
-          fullWidth
-        />
-      </Box>
+  <input
+    id="name"
+    name="name"
+    type="text"
+    placeholder="Name"
+    value={form.name}
+    onChange={handleChange}
+    required
+    style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+  />
+</div>
+
+
+<div className="isufin">
+  <input
+    id="description"
+    name="description"
+    type="text"
+    placeholder="Description"
+    value={form.description}
+    onChange={handleChange}
+    style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px',width:"250px" }}
+  />
+</div>
+
+
+<div className="isufin" style={{ display: 'flex', alignItems: 'flex-end', margin: '8px 9px', border: '1px solid #ccc', borderRadius: '4px' }}>
+  <div style={{ margin: '0 8px', flex: '1' }}>
+    <label htmlFor="costPerUnit" style={{ display: 'block' }}>Cost Per Unit</label>
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <span>{currency.symbol}</span>
+      <input
+        type="number"
+        id="costPerUnit"
+        name="costPerUnit"
+        value={form.costPerUnit}
+        onChange={handleChange}
+        required
+        style={{ marginLeft: '8px', flex: '1', border: '1px solid #ccc', borderRadius: '4px' }}
+      />
     </div>
+  </div>
+  <div style={{ margin: '0 8px', width: 'auto' }}>
+    <label htmlFor="currencySelect" style={{ display: 'block' }}>Currency</label>
+    <select
+      id="currencySelect"
+      value={currency.label}
+      onChange={(e) => setCurrency(currencies.find(c => c.label === e.target.value))}
+      style={{ width: 'auto', border: '1px solid #ccc', borderRadius: '4px' }}
+    >
+      {currencies.map((option) => (
+        <option key={option.label} value={option.label}>
+          {option.label}
+        </option>
+      ))}
+    </select>
+  </div>
+</div>
+
+
+    <div className="isufin">
+  <input
+    id="vendor"
+    name="vendor"
+    type="text"
+    placeholder="Vendor"
+    value={form.vendor}
+    onChange={handleChange}
+    style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px' }}
+  />
+</div>
+
 
    
 
   </div>
   <div className="typdatefineppol">
-      <Box
-        sx={{
-          '& > :not(style)': { m: 1, width: '400%' },
-        }}
-      >
-        <TextField
-          id="buyingUrl"
-          name="buyingUrl"
-          label="Buying URL"
-          variant="outlined"
-          value={form.buyingUrl}
-          onChange={handleChange}
-          fullWidth
-        />
-      </Box>
-    </div>
+  <input
+    id="buyingUrl"
+    name="buyingUrl"
+    type="text"
+    placeholder="Buying URL"
+    value={form.buyingUrl}
+    onChange={handleChange}
+    style={{ padding: '10px', border: '1px solid #ccc', borderRadius: '4px',width: "1100px" }}
+  />
+</div>
+
   <div className='typdatefine1o' style={{ width: '80%' }}>
     <Stack direction="row" spacing={2} justifyContent="flex-end">
       <Button variant="contained" endIcon={<SendIcon />} type="submit">
@@ -509,14 +493,16 @@ const deleteEquipment = async (id, type) => {
 
       )}
       <div className='exportisod'>
-      <Button onClick={exportToCSV} variant="contained" color="primary">
-        Export to CSV
-      </Button>
-      <Button onClick={exportToExcel} variant="contained" color="secondary" style={{ marginLeft: '10px' }}>
-        Export to Excel
-      </Button>
+      <button id='exportisodcsv' onClick={exportToCSV} variant="contained" color="primary">
+      <span class="button__text">Download</span>
+      <span class="button__icon">CSV</span>
+      </button>
+      <button id='exportisodcsv' onClick={exportToExcel} variant="contained" color="secondary" style={{ marginLeft: '10px' }}>
+      <span class="button__text">Download</span>
+      <span class="button__icon">xlsx</span>
+      </button>
       </div>
-      <table className='trfingerefratth'>
+      <table style={styles.table} className='trfingerefratth'>
         <thead>
           <tr className='trfingerefrat'>
           <th>type</th>
@@ -533,7 +519,7 @@ const deleteEquipment = async (id, type) => {
           {allEq.map((fine) => (
             <tr key={fine._id}>
            
-           <td>{fine.type}</td>
+           <td>{fine.type === "workEquipment" ? "Equipment for Work": fine.type === "carEquipment" ? "Equipment for Vehicle" : fine.type}</td>
               <td>{fine.description}</td>
               <td>{fine.name}</td>
               
@@ -567,7 +553,7 @@ const deleteEquipment = async (id, type) => {
               
               <td style={{ textAlign:'center'}}>
                
-              <img src={del} alt="Delete" style={{ cursor: 'pointer', width: '30%' }} onClick={() => handleDeleteClick(fine.itemId,fine.type)} />
+              <img src={del} alt="Delete" style={{ cursor: 'pointer', width: '22px' }} onClick={() => handleDeleteClick(fine.itemId,fine.type)} />
 
                
               </td>
@@ -586,10 +572,10 @@ const deleteEquipment = async (id, type) => {
   aria-labelledby="alert-dialog-title"
   aria-describedby="alert-dialog-description"
 >
-  <DialogTitle id="alert-dialog-title">{"Delete Fine?"}</DialogTitle>
+  <DialogTitle id="alert-dialog-title">{"Delete Equipment?"}</DialogTitle>
   <DialogContent>
     <DialogContentText id="alert-dialog-description">
-      Are you sure you want to delete this fine? This action cannot be undone.
+      Are you sure you want to delete this equipment? This action cannot be undone.
     </DialogContentText>
   </DialogContent>
   <DialogActions>

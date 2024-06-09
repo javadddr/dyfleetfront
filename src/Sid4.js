@@ -64,7 +64,7 @@ const fineStatuses = [
 
 
 const fineForOptions = [
-  { label: 'Car', value: 'car' },
+  { label: 'Vehicle', value: 'car' },
   { label: 'Driver', value: 'driver' },
 ];
 
@@ -407,6 +407,106 @@ const [tempDescription, setTempDescription] = useState("");
       }
     };
     
+    const styles = {
+      table: {
+          width: '100%',
+          borderCollapse: 'separate',
+          boxShadow: '0 0 10px rgba(0,0,0,0.1)',
+          fontSize: "14px",
+        
+          borderSpacing: '0',
+      },
+      th: {
+          backgroundColor: '#1F1F1F',
+          color: 'white',
+          fontWeight: '400',
+          padding: '10px 15px',
+          fontSize: '14px',
+          fontFamily: 'inter, sans-serif',
+      },
+      td: {
+          padding: '8px',
+          borderBottom: '1px solid rgb(235, 235, 235)',
+          textAlign: 'left',
+          color: '#333',
+          fontSize: "13px",
+          fontFamily: 'inter, sans-serif',
+          fontWeight: '400',
+      },
+      hoverRow: {
+          backgroundColor: '#f2f2f2'
+      },
+      modalOverlay: {
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0, 0, 0, 0.5)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          zIndex: 1000,
+      },
+      modal: {
+          backgroundColor: '#FFF',
+          padding: '20px',
+          borderRadius: '5px',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+          width: '300px',
+          textAlign: 'center',
+      },
+      button: {
+          margin: '10px',
+          padding: '10px 20px',
+          cursor: 'pointer',
+          borderRadius: '5px',
+          border: 'none',
+          backgroundColor: '#007BFF',
+          color: 'white',
+          fontSize: '14px',
+      }
+  };
+
+    const firstColumnStyle = {
+      width: '170px',
+      maxWidth: '170px',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+     
+    };
+    const firstColumnStyle2 = {
+      width: '100px',
+      maxWidth: '100px',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+     
+    };
+    const firstColumnStyleS = {
+      width: '90px',
+      maxWidth: '90px',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+     
+    };
+    
+    const firstColumnStyle3 = {
+      width: '210px',
+      maxWidth: '210px',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      whiteSpace: 'nowrap',
+     
+    };
+    const firstColumnStyle4 = {
+      wrap: 'nowrap',
+      width: '120px',
+      maxWidth: '120px',
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+     
+    };
   return (
     
     <div className="mainformfindid">
@@ -493,7 +593,7 @@ const [tempDescription, setTempDescription] = useState("");
 </div>
 
 <div className="isufinvvb">
-  <div>Fine's Amount:</div>
+  <div>Fine's Amount (Cost):</div>
   <input
     type="number"
     id="cost"
@@ -665,27 +765,28 @@ const [tempDescription, setTempDescription] = useState("");
   </div>
       )}
       <div className='exportisod'>
-      <Button onClick={exportToCSV} variant="contained" color="primary">
-        Export to CSV
-      </Button>
-      <Button onClick={exportToExcel} variant="contained" color="secondary" style={{ marginLeft: '10px' }}>
-        Export to Excel
-      </Button>
+      <button id='exportisodcsv' onClick={exportToCSV} variant="contained" color="primary">
+      <span class="button__text">Download</span>
+      <span class="button__icon">CSV</span>
+      </button>
+      <button id='exportisodcsv' onClick={exportToExcel} variant="contained" color="secondary" style={{ marginLeft: '10px' }}>
+      <span class="button__text">Download</span>
+      <span class="button__icon">xlsx</span>
+      </button>
       </div>
-      <table className='trfingerefratth'>
-        <thead>
-          <tr className='trfingerefrat'>
-          <th>Fine Type</th>
+      <table style={styles.table} className='trfingerefratth'>
+        <thead >
+          <tr style={styles.tr} className='trfingerefrat'>
+          <th style={firstColumnStyle}>Reason</th>
             <th>Occur Date</th>
             <th>Due Date</th>
-            <th>Description</th>
-            <th>For</th>
+            <th style={firstColumnStyle}>Description</th>
+            <th style={firstColumnStyle2}>Issued for</th>
             <th>Driver Name</th>
-            <th>Car Name</th>
+            <th>Vehicle Name</th>
             <th>Cost</th>
-            <th>Status</th>
-            <th>Issued From</th>
-            <th>Location</th>
+            <th style={firstColumnStyleS}>Status</th>
+       
             <th>File</th>
             <th>Action</th>
           </tr>
@@ -693,65 +794,63 @@ const [tempDescription, setTempDescription] = useState("");
         <tbody>
           {fines.map((fine) => (
             <tr key={fine._id}>
-           <td>{fine.type}</td>
-           <td>{new Date(fine.occureDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</td>
-      <td>{new Date(fine.dueDate).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</td>
-      <td>
-        
-          {editingFineId === fine._id ? (
-            <input
-            type="text"
-            value={tempDescription}
-            onChange={(e) => setTempDescription(e.target.value)}
-            style={{ width: '100%',height:"20px",fontSize: '12px',padding:'0px' }}
-            className="form-control"
-            required
-        
-          />
-          ) : (
-            fine.description
-          )}
-        </td>
-      
-        <td>
-  {editingFineId === fine._id ? (
-   <div className="form-group-state">
- 
-   <select
-     id="issuedFor"
-     name="for"
-     value={tempFor}
-     onChange={(e) => setTempFor(e.target.value)}
-     required
-     style={{ fontSize: '12px',padding:'0px' }}
-   >
-     <option value="">Select Issued For</option>
-     {fineForOptions.map((option) => (
-       <option key={option.value} value={option.value}>
-         {option.label}
-       </option>
-     ))}
-   </select>
- </div>
- 
-  ) : (
-    fine.for
-  )}
-</td>
+            <td style={firstColumnStyle}>{fine.type}</td>
+            <td>{new Date(fine.occureDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</td>
+            <td>{new Date(fine.dueDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</td>
+            <td style={firstColumnStyle3}>
+                {editingFineId === fine._id ? (
+                  <input
+                  type="text"
+                  value={tempDescription}
+                  onChange={(e) => setTempDescription(e.target.value)}
+                  style={{ width: '95%',height:"20px",fontSize: '12px',padding:'0px' }}
+                  className="form-control"
+                  required
+              
+                />
+                ) : (
+                  fine.description
+                )}
+              </td>
+              <td>
+                {editingFineId === fine._id ? (
+                <div className="form-group-state77">
+              
+                <select
+                  id="issuedFor"
+                  name="for"
+                  value={tempFor}
+                  onChange={(e) => setTempFor(e.target.value)}
+                  required
+                  style={{ fontSize: '12px',padding:'0px', width: '95%' }}
+                >
+                  <option value="">Select Issued For</option>
+                  {fineForOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              
+                ) : (
+                  fine.for === "car" ? "Vehicle" : fine.for === "driver" ? "Driver" : fine.for
+                )}
+              </td>
 
               <td>{fine.driverName}</td>
               <td>{fine.carName}</td>
               <td>{fine.cost}</td>
-              <td>
+              <td style={firstColumnStyle4}>
   {editingFineId === fine._id ? (
-   <div className="form-group-state">
+   <div className="form-group-state77">
  
    <select
      value={tempStatus}
      onChange={(event) => {
        setTempStatus(event.target.value);
      }}
-     style={{ fontSize: '12px',padding:'0px' }}
+     style={{ fontSize: '12px',padding:'0px', width: '85%' }}
      required
    >
      <option value="">Select Status</option>
@@ -768,23 +867,20 @@ const [tempDescription, setTempDescription] = useState("");
   )}
 </td>
 
-
-              <td>{fine.issuedFrom}</td>
-              <td>{fine.location}</td>
               <td>{fine.file ? <a href={`${process.env.REACT_APP_BACKEND_URL}/fines/${fine.file}`} target="_blank" rel="noopener noreferrer">See Fine</a> : 'No File'}</td>
               <td style={{ textAlign:'center'}}>
                
-              <img src={del} alt="Delete" style={{ cursor: 'pointer', width: '18%' }} onClick={() => handleDeleteClick(fine._id)} />
+              <img src={del} alt="Delete" style={{ cursor: 'pointer', width: '22px' }} onClick={() => handleDeleteClick(fine._id)} />
               
               {editingFineId !== fine._id ? (
                 <img
                   src={editIcon}
                   alt="Edit"
-                  style={{ cursor: 'pointer', width: '18%' }}
+                  style={{ cursor: 'pointer', width: '20px',marginLeft:'15px' }}
                   onClick={() => handleEditClick(fine._id, fine.description, fine.for, fine.status)}
                 />
               ) : (
-                <Button onClick={() => handleSaveEdit(fine._id)}>Save</Button>
+                <button id='savefinedoi' onClick={() => handleSaveEdit(fine._id) }>Save</button>
               )}
 
         

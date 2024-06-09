@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
-import Sid2 from './Sid2'; // Adjust the path as necessary
-import Sid10 from './Sid10'; // Adjust the path as necessary
-import Sid4 from './Sid4'; // Adjust the path as necessary
+import Sid2 from './Sid2'; 
+import Sid10 from './Sid10'; 
+import Sid4 from './Sid4'; 
 import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import li from "./eq.svg"; // Driver License Check icon
-import ins from "./fine.svg"; // Inspection icon
-import bil from "./ari.svg"; // Driver UVV icon
+import li from "./eq.svg"; 
+import ins from "./fine.svg"; 
+import bil from "./ari.svg"; 
 
 function Compliance() {
   const [value, setValue] = useState(0);
