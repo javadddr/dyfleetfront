@@ -94,7 +94,7 @@ html, body {
 }
 
 .register-form h2 {
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   color: #1c0da1;
   font-size:22px ;
   margin-top: 10px;
@@ -209,4 +209,15 @@ font-weight: 600;
     justify-content:flex-start;
     margin-top: 20px;
   }
+}
+
+#signInDiv{
+  display: flex;
+  justify-content: center;
+  max-width: 50%;
+  min-width: 50%;
+  margin-left: 25%;
+  border-radius: 5px;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
