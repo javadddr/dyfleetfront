@@ -25,7 +25,8 @@ function Login() {
     setIsLoading(true);
 
     try {
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/login`, {
+      // Attempt to log in the user
+      const loginResponse = await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -33,26 +34,47 @@ function Login() {
           password: 'google_oauth' // Use the default password for Google login
         }),
       });
-      const data = await response.json();
+      const loginData = await loginResponse.json();
 
-      if (response.ok) {
+      if (loginResponse.ok) {
         // Store user information and token in localStorage
-        localStorage.setItem('userToken', data.token);
-        localStorage.setItem('userRoles', data.result.roles);
-        localStorage.setItem('username', data.result.username);
-        localStorage.setItem('userEmail', data.result.email);
-        localStorage.setItem('userId', data.result._id);
-        localStorage.setItem('capacity', data.result.capacity.toString());
-
-        const createdAtDate = new Date(data.result.createdAt);
-        const currentDate = new Date();
-        const timeDiff = currentDate.getTime() - createdAtDate.getTime();
-        const daysSinceCreation = Math.floor(timeDiff / (1000 * 3600 * 24));
-        localStorage.setItem('createdAtDays', daysSinceCreation.toString());
-
+        storeUserData(loginData);
         navigate('/main'); // Redirect to MainPage
       } else {
-        setErrorMessage('Login failed. Please verify your credentials and try again.');
+        // If login fails, attempt to register the user
+        const registerResponse = await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/google-register`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: userObject.email,
+            name: userObject.name
+          }),
+        });
+
+        const registerData = await registerResponse.json();
+
+        if (registerResponse.ok) {
+          // Proceed to login after successful registration
+          const newLoginResponse = await fetch(`${process.env.REACT_APP_BACKEND_URL}/auth/login`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email: userObject.email,
+              password: 'google_oauth' // Use 'google_oauth' as the password for Google login
+            }),
+          });
+
+          const newLoginData = await newLoginResponse.json();
+
+          if (newLoginResponse.ok) {
+            storeUserData(newLoginData);
+            navigate('/main'); // Redirect to MainPage after login
+          } else {
+            setErrorMessage('Login after registration failed. Please try logging in manually.');
+          }
+        } else {
+          setErrorMessage('Google Registration failed. Please try again.');
+        }
       }
     } catch (error) {
       console.error('Google login error:', error);
@@ -61,6 +83,22 @@ function Login() {
       setIsLoading(false);
     }
   };
+
+  const storeUserData = (data) => {
+    localStorage.setItem('userToken', data.token);
+    localStorage.setItem('userRoles', data.result.roles);
+    localStorage.setItem('username', data.result.username);
+    localStorage.setItem('userEmail', data.result.email);
+    localStorage.setItem('userId', data.result._id);
+    localStorage.setItem('capacity', data.result.capacity.toString());
+
+    const createdAtDate = new Date(data.result.createdAt);
+    const currentDate = new Date();
+    const timeDiff = currentDate.getTime() - createdAtDate.getTime();
+    const daysSinceCreation = Math.floor(timeDiff / (1000 * 3600 * 24));
+    localStorage.setItem('createdAtDays', daysSinceCreation.toString());
+  };
+
 
   useEffect(() => {
     /* global google */
