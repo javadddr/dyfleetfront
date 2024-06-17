@@ -211,11 +211,13 @@ function Register() {
           <button id='justatikso' type="submit" className="form-submit" disabled={isLoading}>
             {isLoading ? 'Registering...' : 'Register'}
           </button>
+          <div className='googldivin'>Alternatively, Register with your Google Account.</div>
+          <div id='signInDiv'></div>
           <h6 className="term-form-footer">
             By registering, you accept our <br />
             <a href="https://dynamofleet.com/terms-of-service" target="_blank" rel="noopener noreferrer" style={{ color: 'blue' }}>Terms of Service</a> and <a href="https://dynamofleet.com/privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: 'blue' }}>Privacy Notice</a>.
           </h6>
-          <div id='signInDiv'></div>
+        
           <p className="form-footer">
              <Link to="/login">Already have an account? <span>Log in here</span></Link>.
           </p>

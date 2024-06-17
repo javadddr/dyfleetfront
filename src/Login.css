@@ -94,7 +94,7 @@ html, body {
   font-size: 12px;
   text-align: center;
   color: #5d5d5d;
-  margin-top: 5px;
+  margin-top: 2px;
 }
 
 #justatikso{
@@ -108,7 +108,7 @@ html, body {
   cursor: pointer;
   transition: transform 0.2s ease;
   font-size: 17px;
-  margin-top: 30px;
+  margin-top: 15px;
   margin-left: 15%;
   font-family:'Poppins','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
 }
@@ -325,6 +325,11 @@ color: #120ee5;
 
 .googldivin{
   margin-top: 10px;
-  margin-left: 28%;
+  margin-left: 15%;
+  margin-bottom: 10px;
+}
+.googldivinp{
+  margin-top: 0px;
+  margin-left: 15%;
   margin-bottom: 10px;
 }
