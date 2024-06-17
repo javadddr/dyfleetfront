@@ -172,6 +172,7 @@ function Login() {
           <div className='passwrongi'>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
           </div>
+          <div className='googldivin'>Or login with Google Account</div>
           <div id='signInDiv'></div>
           <div className='forgotpass'>
             <Link to="/change-password">Did you forget your password? <span>Click here!</span></Link>

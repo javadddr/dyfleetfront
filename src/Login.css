@@ -258,13 +258,16 @@ justify-content: flex-start;
   width: 106%;
 }
 .forgotpass{
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .forgotpass span{
 color: #120ee5;
 }
 .forgotrigister span{
+  color: #120ee5;
+}
+.forgotregister span{
   color: #120ee5;
 }
 
@@ -318,4 +321,10 @@ color: #120ee5;
 
 .term-form-footer a{
   margin-top: 0px;
+}
+
+.googldivin{
+  margin-top: 10px;
+  margin-left: 28%;
+  margin-bottom: 10px;
 }
